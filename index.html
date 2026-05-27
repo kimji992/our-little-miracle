@@ -19,9 +19,11 @@
     h1{font-family:'Gowun Batang',serif;font-size:clamp(2.3rem,9.5vw,4.2rem);line-height:1.13;margin:14px 0 7px}
     .sub{font-size:clamp(1.12rem,4.8vw,1.6rem)}
 
-    .wrap{width:min(92vw,760px);margin:0 auto 86px}
-    .section{position:relative;margin:15px 0;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px 18px;box-shadow:0 12px 28px rgba(132,97,72,.08)}
-    .section:before{content:'';position:absolute;right:14px;top:14px;width:44px;height:44px;background:radial-gradient(circle,#ffe7d8 0 11px,transparent 12px),radial-gradient(circle at 70% 68%,#ffd8bf 0 7px,transparent 8px);opacity:.7}
+    .wrap{width:min(92vw,760px);margin:-14px auto 86px;padding:20px 0 0;position:relative}
+    .wrap:before{content:'';position:absolute;left:10px;right:10px;top:0;bottom:0;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(255,255,255,.62));border:1px solid #f6e8dd;box-shadow:0 14px 34px rgba(132,97,72,.08);z-index:-1}
+    .section{position:relative;margin:0;padding:26px 20px;background:transparent;border:0;border-radius:0;box-shadow:none}
+    .section + .section{border-top:1px solid var(--line)}
+    .section:before{content:none}
     .en{font-size:12px;letter-spacing:1.9px;text-transform:uppercase;color:#9d8472;font-weight:700}
     .ko{font-family:'Gowun Batang',serif;font-size:1.85rem;margin:5px 0 11px}
     .txt{font-size:1.06rem;color:var(--muted)}
@@ -45,7 +47,7 @@
     .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:84%;overflow:auto;gap:12px;scroll-snap-type:x mandatory;margin-top:10px;padding-bottom:2px}
     .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;scroll-snap-align:center;box-shadow:0 8px 18px rgba(0,0,0,.07)}
 
-    .end{position:relative;min-height:45svh;border-radius:26px;overflow:hidden;margin-top:15px;display:flex;align-items:flex-end}
+    .end{position:relative;min-height:45svh;border-radius:0 0 28px 28px;overflow:hidden;margin-top:0;display:flex;align-items:flex-end}
     .end img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .end:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.61))}
     .end .copy{position:relative;z-index:2;color:#fff;padding:20px}
