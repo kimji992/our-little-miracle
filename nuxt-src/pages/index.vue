@@ -68,7 +68,7 @@ onMounted(async () => {
     <main>
       <section class="hero section">
         <div class="container hero-box card reveal hero-reveal">
-          <video class="hero-video" autoplay loop playsinline preload="auto" controls :poster="'/our-little-miracle/images/ultrasound-1.jpg'">
+          <video class="hero-video" autoplay loop playsinline preload="auto" controls >
             <source :src="'/our-little-miracle/videos/cholong-kick.mov'" type="video/quicktime" />
             <source :src="'/our-little-miracle/videos/kick.mp4'" type="video/mp4" />
           </video>
