@@ -95,18 +95,7 @@ onMounted(async () => {
       </section>
 
 
-      <section class="section" style="padding-top:0">
-        <div class="container">
-          <h2 class="title reveal">샘플 임베드 보기</h2>
-          <div class="embed-wrap card reveal">
-            <iframe
-              loading="lazy"
-              class="embed-frame"
-              src="https://www.miricanvas.com/v2/ko/design2/v/23b88770-45df-46ff-a256-e867edcda872?mode=embed"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+      
 
       <section class="section" style="padding-top:0">
         <div class="container">
