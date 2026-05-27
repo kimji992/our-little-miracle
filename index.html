@@ -6,48 +6,55 @@
   <title>우리 아기 첫 돌잔치 초대장</title>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#fff7f2;--card:#fff;--line:#f1e3d8;--txt:#2b2623;--muted:#776a61;--point:#ee9f77}
-    *{box-sizing:border-box}html,body{margin:0;padding:0}
-    body{font-family:Pretendard,sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
-    .deco{position:fixed;inset:0;background:
-      radial-gradient(circle at 12% 22%, #ffe7d8 0 10px, transparent 11px),
-      radial-gradient(circle at 88% 18%, #ffe7d8 0 10px, transparent 11px),
-      radial-gradient(circle at 16% 78%, #ffe7d8 0 9px, transparent 10px),
-      radial-gradient(circle at 86% 82%, #ffe7d8 0 9px, transparent 10px);opacity:.45;z-index:-1}
-    .hero{position:relative;min-height:86svh;display:flex;align-items:flex-end;overflow:hidden}
-    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.58))}
-    .hero .copy{position:relative;z-index:2;color:#fff;width:min(92vw,760px);margin:0 auto;padding:26px 8px 30px}
-    .chip{display:inline-flex;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.2);font-size:12px;font-weight:700}
-    h1{font-family:'Gowun Batang',serif;font-size:clamp(2.2rem,9vw,4rem);line-height:1.14;margin:12px 0 6px}
-    .sub{font-size:clamp(1.1rem,4.8vw,1.55rem)}
-    .wrap{width:min(92vw,760px);margin:0 auto 90px}
-    .section{margin:14px 0;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 18px;box-shadow:0 10px 26px rgba(140,100,74,.08)}
-    .en{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:#9d8676;font-weight:700}
-    .ko{font-family:'Gowun Batang',serif;font-size:1.8rem;margin:4px 0 10px}
-    .txt{font-size:1.05rem;color:var(--muted)}
-    .profile{display:grid;grid-template-columns:94px 1fr;gap:14px;align-items:center}
-    .profile img{width:94px;height:94px;border-radius:50%;object-fit:cover;border:4px solid #fff0e4}
+    :root{--bg:#fff8f2;--card:#fff;--line:#f2e2d5;--txt:#2c2724;--muted:#7d6f66;--point:#ef9f79;--point2:#f7cfb5}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Pretendard,sans-serif;background:var(--bg);color:var(--txt);line-height:1.74}
+    .pattern{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 8% 15%,#ffe8d7 0 7px,transparent 8px),radial-gradient(circle at 92% 20%,#ffe8d7 0 8px,transparent 9px),radial-gradient(circle at 14% 76%,#ffe8d7 0 7px,transparent 8px),radial-gradient(circle at 85% 86%,#ffe8d7 0 8px,transparent 9px),linear-gradient(#fff8f2,#fff8f2)}
+    .hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden}
+    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.03)}
+    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.62))}
+    .hero .copy{position:relative;z-index:2;width:min(92vw,760px);margin:0 auto;padding:30px 8px 34px;color:#fff}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.52);background:rgba(255,255,255,.22);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.9px}
+    h1{font-family:'Gowun Batang',serif;font-size:clamp(2.3rem,9.5vw,4.2rem);line-height:1.13;margin:14px 0 7px}
+    .sub{font-size:clamp(1.12rem,4.8vw,1.6rem)}
+
+    .wrap{width:min(92vw,760px);margin:0 auto 86px}
+    .section{position:relative;margin:15px 0;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px 18px;box-shadow:0 12px 28px rgba(132,97,72,.08)}
+    .section:before{content:'';position:absolute;right:14px;top:14px;width:44px;height:44px;background:radial-gradient(circle,#ffe7d8 0 11px,transparent 12px),radial-gradient(circle at 70% 68%,#ffd8bf 0 7px,transparent 8px);opacity:.7}
+    .en{font-size:12px;letter-spacing:1.9px;text-transform:uppercase;color:#9d8472;font-weight:700}
+    .ko{font-family:'Gowun Batang',serif;font-size:1.85rem;margin:5px 0 11px}
+    .txt{font-size:1.06rem;color:var(--muted)}
+
+    .profile{display:grid;grid-template-columns:98px 1fr;gap:14px;align-items:center;margin-top:8px}
+    .profile img{width:98px;height:98px;border-radius:50%;object-fit:cover;border:5px solid #fff2e8;box-shadow:0 6px 14px rgba(0,0,0,.07)}
+
     .timeline{display:grid;gap:10px}
-    .item{display:grid;grid-template-columns:82px 1fr;gap:12px;border:1px solid var(--line);border-radius:14px;padding:10px;background:#fffdfa}
-    .item img{width:82px;height:82px;border-radius:12px;object-fit:cover}
-    .calendar{margin-top:8px;border:1px solid var(--line);border-radius:14px;padding:10px;background:#fffdfa}
+    .item{display:grid;grid-template-columns:84px 1fr;gap:12px;border:1px solid var(--line);border-radius:16px;padding:10px;background:linear-gradient(180deg,#fffdfa,#fff)}
+    .item img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+    .item b{display:block;font-size:1.05rem;margin-bottom:2px}
+
+    .calendar{margin-top:8px;border:1px solid var(--line);border-radius:16px;padding:11px;background:#fffdf9}
     .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
-    .grid div{text-align:center;padding:7px 0;border:1px solid #f3e8dd;border-radius:7px;background:#fff;font-size:.86rem}
-    .grid .mark{background:var(--point);color:#fff;border-color:var(--point);font-weight:700}
+    .grid div{text-align:center;padding:8px 0;border:1px solid #f3e8df;border-radius:8px;background:#fff;font-size:.86rem}
+    .grid .mark{background:linear-gradient(145deg,var(--point),#e38e67);color:#fff;border-color:#e38e67;font-weight:700}
+
     .mapbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-    .mapbtns a{text-decoration:none;text-align:center;border:1px solid var(--line);border-radius:10px;padding:10px 8px;background:#fff;color:#352f2b;font-size:.92rem}
-    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:84%;overflow:auto;gap:12px;scroll-snap-type:x mandatory;margin-top:10px}
-    .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;scroll-snap-align:center}
-    .end{position:relative;min-height:42svh;border-radius:24px;overflow:hidden;margin-top:14px;display:flex;align-items:flex-end}
+    .mapbtns a{text-decoration:none;text-align:center;border:1px solid var(--line);border-radius:11px;padding:10px 8px;background:#fff;color:#3a3430;font-size:.92rem}
+
+    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:84%;overflow:auto;gap:12px;scroll-snap-type:x mandatory;margin-top:10px;padding-bottom:2px}
+    .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;scroll-snap-align:center;box-shadow:0 8px 18px rgba(0,0,0,.07)}
+
+    .end{position:relative;min-height:45svh;border-radius:26px;overflow:hidden;margin-top:15px;display:flex;align-items:flex-end}
     .end img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .end:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.6))}
-    .end .copy{position:relative;z-index:2;color:#fff;padding:18px}
-    .music{position:fixed;right:14px;bottom:14px;border:0;border-radius:999px;padding:13px 16px;background:var(--point);color:#fff;font-weight:700;z-index:99}
+    .end:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.61))}
+    .end .copy{position:relative;z-index:2;color:#fff;padding:20px}
+
+    .music{position:fixed;right:14px;bottom:14px;border:0;border-radius:999px;padding:13px 16px;background:linear-gradient(145deg,var(--point),#e78961);color:#fff;font-weight:700;z-index:99;box-shadow:0 10px 22px rgba(0,0,0,.2)}
   </style>
 </head>
 <body>
-<div class="deco"></div>
+<div class="pattern"></div>
 <section class="hero">
   <img src="images/family-1.jpg" alt="메인">
   <div class="copy">
@@ -63,7 +70,7 @@
   <section class="section"><div class="en">First Birthday</div><div class="ko">행사 안내</div><div class="txt">2026. 00. 00. (토) 오후 12시 · OOO 돌잔치홀</div><div class="calendar"><div class="grid"><div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div><div></div><div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div class="mark">14</div><div>15</div><div>16</div><div>17</div></div></div></section>
   <section class="section"><div class="en">Location</div><div class="ko">오시는 길</div><div class="txt">경기 성남시 분당구 OOO로 00</div><div class="mapbtns"><a href="#">네이버지도</a><a href="#">티맵</a><a href="#">카카오맵</a></div></section>
   <section class="section"><div class="en">Gallery</div><div class="ko">갤러리</div><div class="gallery"><img src="images/ultrasound-1.jpg"><img src="images/ultrasound-2.jpg"><img src="images/family-1.jpg"></div></section>
-  <section class="end"><img src="images/family-1.jpg"><div class="copy"><div style="font-size:1.6rem;font-weight:800">제 첫 생일 🎂</div><div style="font-size:1.08rem">같이 축하해 주실 거죠?</div></div></section>
+  <section class="end"><img src="images/family-1.jpg"><div class="copy"><div style="font-size:1.62rem;font-weight:800">제 첫 생일 🎂</div><div style="font-size:1.08rem">같이 축하해 주실 거죠?</div></div></section>
 </main>
 <button id="musicToggle" class="music">🎵 음악 재생</button>
 <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
