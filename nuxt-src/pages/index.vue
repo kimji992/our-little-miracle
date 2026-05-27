@@ -32,7 +32,7 @@ const toggleMusic = async () => {
         <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" class="hero-img" alt="ultrasound-main" />
         <div style="margin-top:16px"><span class="badge joy-gradient">FIRST REVEAL</span></div>
         <h1>할아버지, 할머니가 되신 걸<br>축하드려요</h1>
-        <p class="lead">오늘 처음 전하는 소중한 소식, 우리 아기가 찾아왔어요 💛</p>
+        <p class="lead">오늘 처음 전하는 소중한 소식,<br>우리 아기가 찾아왔어요 💛</p>
       </section>
 
       <!-- 2. congratulation section -->
@@ -41,31 +41,32 @@ const toggleMusic = async () => {
           <span class="material-symbols-outlined" style="font-size:52px;color:#006c52">celebration</span>
           <h2 class="k-title" style="color:#006c52">축하합니다</h2>
           <p style="font-size:24px;color:#006684">할아버지, 할머니가 되셨어요!</p>
+          <p class="muted" style="margin:10px 0 0">가장 먼저 이 기쁨을 전해드려요.</p>
         </div>
       </section>
 
       <!-- 3. timeline blocks -->
       <section class="sec">
         <div class="container">
-          <h2 class="k-title">우리의 성장 이야기</h2>
+          <h2 class="k-title">Our Growing Miracle</h2>
           <div class="timeline">
             <div class="row">
               <div class="text" style="text-align:center">
-                <strong>첫 만남</strong>
+                <strong>첫 만남 · The Little Dot</strong>
                 <p class="muted">아주 작은 점으로 시작된 우리의 기적.</p>
               </div>
               <div class="card"><img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="u1" /></div>
             </div>
             <div class="row rev">
               <div class="text" style="text-align:center">
-                <strong>두근거림</strong>
+                <strong>두근거림 · First Big Milestone</strong>
                 <p class="muted">처음 들은 심장 소리에 웃고 울던 순간.</p>
               </div>
               <div class="card"><img :src="'/our-little-miracle/images/ultrasound-2.jpg'" alt="u2" /></div>
             </div>
             <div class="row">
               <div class="text" style="text-align:center">
-                <strong>기다림의 시간</strong>
+                <strong>기다림의 시간 · Wiggling Toes & Fingers</strong>
                 <p class="muted">사랑으로 채워가는 매일의 기록.</p>
               </div>
               <div class="card"><img :src="'/our-little-miracle/images/family-1.jpg'" alt="family" /></div>
@@ -87,7 +88,7 @@ const toggleMusic = async () => {
 
       <!-- 5. final greeting/footer style -->
       <section class="sec" style="padding-top:28px;padding-bottom:56px;text-align:center">
-        <p class="muted" style="margin:0">Our Little Miracle · For Grandpa & Grandma</p>
+        <p class="muted" style="margin:0">Made with love for Grandpa & Grandma</p>
       </section>
     </main>
 
