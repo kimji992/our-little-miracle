@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 const loading = ref(true)
 const playing = ref(false)
 const audio = ref(null)
-onMounted(() => setTimeout(() => (loading.value = false), 900))
+onMounted(() => setTimeout(() => (loading.value = false), 1200))
 const toggleMusic = async () => {
   if (!audio.value) return
   if (!playing.value) { await audio.value.play(); playing.value = true }
@@ -13,51 +13,85 @@ const toggleMusic = async () => {
 
 <template>
   <div>
-    <div class="loader" :class="{ hide: !loading }"><div>Our Little Miracle</div></div>
+    <div class="loader" :class="{ hide: !loading }">
+      <div style="text-align:center">
+        <h2 style="margin:0;color:#006c52">Our Little Miracle</h2>
+        <p class="muted" style="margin:.4rem 0 0">초대장을 준비하고 있어요</p>
+      </div>
+    </div>
 
-    <header class="top">우리의 작은 기적</header>
+    <header class="top">
+      <span class="material-symbols-outlined" style="color:#006c52">favorite</span>
+      <strong style="color:#006c52">우리의 작은 기적</strong>
+      <span class="material-symbols-outlined" style="color:#006c52">share</span>
+    </header>
 
     <main>
-      <section class="hero section">
-        <div class="container hero-box card">
-          <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="hero" />
-          <div class="badge">FIRST REVEAL</div>
-          <h1>할아버지 · 할머니</h1>
-          <p class="lead">축하드려요 💛</p>
+      <!-- 1. hero / coming soon -->
+      <section class="hero">
+        <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" class="hero-img" alt="ultrasound-main" />
+        <div style="margin-top:16px"><span class="badge joy-gradient">FIRST REVEAL</span></div>
+        <h1>할아버지, 할머니가 되신 걸<br>축하드려요</h1>
+        <p class="lead">오늘 처음 전하는 소중한 소식, 우리 아기가 찾아왔어요 💛</p>
+      </section>
+
+      <!-- 2. congratulation section -->
+      <section class="sec" style="background:#e9f9f4">
+        <div class="container" style="text-align:center">
+          <span class="material-symbols-outlined" style="font-size:52px;color:#006c52">celebration</span>
+          <h2 class="k-title" style="color:#006c52">축하합니다</h2>
+          <p style="font-size:24px;color:#006684">할아버지, 할머니가 되셨어요!</p>
         </div>
       </section>
 
-      <section class="section" style="padding-top:8px">
-        <div class="container stack">
-          <article class="item">
-            <div class="img"><img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="u1" /></div>
-            <div class="txt" style="display:flex;align-items:center;justify-content:center"><div class="k">STEP 01 · 첫 만남</div></div>
-          </article>
-          <article class="item rev">
-            <div class="img"><img :src="'/our-little-miracle/images/ultrasound-2.jpg'" alt="u2" /></div>
-            <div class="txt" style="display:flex;align-items:center;justify-content:center"><div class="k">STEP 02 · 두근거림</div></div>
-          </article>
-          <article class="item">
-            <div class="img"><img :src="'/our-little-miracle/images/family-1.jpg'" alt="f1" /></div>
-            <div class="txt" style="display:flex;align-items:center;justify-content:center"><div class="k">STEP 03 · 기다림</div></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" style="padding-top:10px">
-        <div class="container card" style="padding:14px">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-            <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px" alt="g1" />
-            <img :src="'/our-little-miracle/images/ultrasound-2.jpg'" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px" alt="g2" />
-            <img :src="'/our-little-miracle/images/family-1.jpg'" style="grid-column:1 / span 2;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px" alt="g3" />
+      <!-- 3. timeline blocks -->
+      <section class="sec">
+        <div class="container">
+          <h2 class="k-title">우리의 성장 이야기</h2>
+          <div class="timeline">
+            <div class="row">
+              <div class="text" style="text-align:center">
+                <strong>첫 만남</strong>
+                <p class="muted">아주 작은 점으로 시작된 우리의 기적.</p>
+              </div>
+              <div class="card"><img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="u1" /></div>
+            </div>
+            <div class="row rev">
+              <div class="text" style="text-align:center">
+                <strong>두근거림</strong>
+                <p class="muted">처음 들은 심장 소리에 웃고 울던 순간.</p>
+              </div>
+              <div class="card"><img :src="'/our-little-miracle/images/ultrasound-2.jpg'" alt="u2" /></div>
+            </div>
+            <div class="row">
+              <div class="text" style="text-align:center">
+                <strong>기다림의 시간</strong>
+                <p class="muted">사랑으로 채워가는 매일의 기록.</p>
+              </div>
+              <div class="card"><img :src="'/our-little-miracle/images/family-1.jpg'" alt="family" /></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <p class="footer">with love</p>
+      <!-- 4. letter section -->
+      <section class="sec" style="background:#f4f6f8">
+        <div class="panel">
+          <h3 style="font-size:34px;color:#006c52;margin-top:0">사랑하는 할아버지, 할머니께</h3>
+          <p class="muted">작은 생명을 기다리는 시간 동안 늘 따뜻하게 응원해 주셔서 감사합니다.</p>
+          <p class="muted">이 기쁜 소식을 가장 먼저 전하고 싶었습니다.</p>
+          <p class="muted">앞으로도 우리 아기의 모든 계절을 함께해 주세요.</p>
+          <p style="color:#006c52;font-weight:700">진심으로 감사하고 사랑합니다 💛</p>
+        </div>
+      </section>
+
+      <!-- 5. final greeting/footer style -->
+      <section class="sec" style="padding-top:28px;padding-bottom:56px;text-align:center">
+        <p class="muted" style="margin:0">Our Little Miracle · For Grandpa & Grandma</p>
+      </section>
     </main>
 
-    <button class="music" @click="toggleMusic">{{ playing ? '음악 멈춤' : '음악 재생' }}</button>
+    <button class="music joy-gradient" @click="toggleMusic">{{ playing ? '⏸️ 음악 멈춤' : '🎵 음악 재생' }}</button>
     <audio ref="audio" :src="'/our-little-miracle/audio/bgm.wav'" loop preload="none" />
   </div>
 </template>
