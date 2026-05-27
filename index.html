@@ -1,154 +1,107 @@
-<!DOCTYPE html>
-<html class="no-js" lang="ko">
+<!doctype html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>우리의 작은 기적</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="우리 가족의 소중한 임신 소식" />
-
-  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/modernizr-2.6.2.min.js"></script>
+  <meta name="theme-color" content="#f5f2ee" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
-    .fh5co-nav,.fh5co-loader{display:none!important}
-    #fh5co-header .display-tc h1{font-size:68px}
-    #fh5co-header .display-tc h2{font-size:34px}
-    .fh5co-heading p, #fh5co-couple-story p, .timeline .timeline-body>p {font-size:20px; line-height:1.8;}
-    .timeline .timeline-panel .timeline-title{font-size:28px}
-    .timeline .date{font-size:16px}
-    .music-fab{position:fixed;right:16px;bottom:18px;z-index:9999;border:0;border-radius:999px;padding:13px 18px;font-size:17px;font-weight:700;background:#F14E95;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.25)}
-    .section-note{font-size:22px;color:#666}
-    .gallery-thumb{height:330px!important;background-size:cover!important;background-position:center!important}
-    @media (max-width:768px){
-      #fh5co-header .display-tc h1{font-size:52px}
-      #fh5co-header .display-tc h2{font-size:28px}
-      .section-note{font-size:20px}
-      .gallery-thumb{height:240px!important}
+    :root{
+      --bg:#f5f2ee;--card:#ffffffcc;--text:#171717;--muted:#666;--line:#e8e2da;--accent:#111;
     }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 500px at 50% -200px,#fff,#f5f2ee 60%);
+      font-size:18px; line-height:1.7;
+    }
+    .wrap{width:min(92vw,760px);margin:0 auto 110px}
+    .hero{min-height:72vh;display:flex;align-items:flex-end;padding:24px 0 20px;position:relative}
+    .hero-photo{position:absolute;inset:0;border-radius:0 0 26px 26px;overflow:hidden}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.03)}
+    .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.55))}
+    .hero-copy{position:relative;z-index:2;color:#fff;padding:0 18px 20px}
+    .kicker{font-size:12px;letter-spacing:2px;font-weight:700;opacity:.92}
+    h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,10vw,68px);line-height:1.04;margin:8px 0}
+    .subtitle{font-size:clamp(20px,4.6vw,28px);opacity:.96;margin:0}
+
+    .card{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 18px;margin:14px 0;box-shadow:0 14px 34px rgba(0,0,0,.06)}
+    h2{font-size:clamp(26px,6vw,34px);line-height:1.2;margin:0 0 10px;font-weight:800}
+    p{margin:0}
+    .muted{color:var(--muted)}
+
+    .timeline{display:grid;gap:10px}
+    .timeline-item{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}
+    .timeline-item strong{display:block;font-size:22px;margin-bottom:4px}
+
+    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
+    .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;scroll-snap-align:center;background:#eee}
+    .hint{font-size:14px;color:#7a7a7a;margin-top:8px}
+
+    .music{
+      position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:99;
+      border:0;border-radius:999px;padding:14px 17px;font-size:16px;font-weight:800;
+      background:#111;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.24)
+    }
+
+    .reveal{opacity:0;transform:translateY(14px);transition:all .7s ease}
+    .reveal.show{opacity:1;transform:none}
   </style>
 </head>
 <body>
-<div id="page">
-  <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/family-1.jpg);" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <div class="display-t">
-            <div class="display-tc animate-box" data-animate-effect="fadeIn">
-              <h1>Our Little Miracle</h1>
-              <h2>우리에게 소중한 아기가 찾아왔어요</h2>
-              <p><a href="#fh5co-couple" class="btn btn-default btn-sm">기쁜 소식 보기</a></p>
-            </div>
-          </div>
-        </div>
+  <main class="wrap">
+    <section class="hero reveal">
+      <div class="hero-photo"><img src="images/family-1.jpg" alt="가족 사진"></div>
+      <div class="hero-copy">
+        <div class="kicker">OUR LITTLE MIRACLE</div>
+        <h1>Baby<br>On The Way</h1>
+        <p class="subtitle">우리에게 소중한 아기가 찾아왔어요</p>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <div id="fh5co-couple">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-          <h2>Hello!</h2>
-          <h3>우리 가족의 새 출발</h3>
-          <p class="section-note">사랑으로 기다리던 아기가 저희에게 와주었어요.<br>조심스럽고 감사한 마음으로 하루하루를 보내고 있습니다.</p>
-        </div>
-      </div>
-      <div class="couple-wrap animate-box">
-        <div class="couple-half">
-          <div class="groom"><img src="images/ultrasound-1.jpg" alt="ultrasound" class="img-responsive"></div>
-          <div class="desc-groom"><h3>처음 알게 된 날</h3><p>설렘과 벅참으로 가득했던 날. 작은 생명이 찾아와 준 순간을 오래 기억하려고 해요.</p></div>
-        </div>
-        <p class="heart text-center"><i class="icon-heart2"></i></p>
-        <div class="couple-half">
-          <div class="bride"><img src="images/ultrasound-2.jpg" alt="ultrasound" class="img-responsive"></div>
-          <div class="desc-bride"><h3>지금의 마음</h3><p>건강하게 자라나길 기도하며, 하루하루를 따뜻한 마음으로 채워가고 있어요.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <section class="card reveal">
+      <h2>기쁜 소식 전해요</h2>
+      <p class="muted">사랑으로 기다리던 아기가 저희에게 와주었어요. 조심스럽고 감사한 마음으로 하루하루를 보내고 있습니다. 함께 축복해주시면 큰 힘이 됩니다.</p>
+    </section>
 
-  <div id="fh5co-couple-story">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-          <span>우리의 이야기</span>
-          <h2>아기를 기다리는 시간</h2>
-        </div>
+    <section class="card reveal">
+      <h2>우리의 시간</h2>
+      <div class="timeline">
+        <div class="timeline-item"><strong>처음 알게 된 날</strong><span class="muted">설렘과 벅참으로 가득했던 순간</span></div>
+        <div class="timeline-item"><strong>첫 심장 소리</strong><span class="muted">작은 두근거림에 눈물이 핑 돌았어요</span></div>
+        <div class="timeline-item"><strong>오늘의 마음</strong><span class="muted">건강하게 만나길 기도하며 기다리고 있어요</span></div>
       </div>
-      <div class="row">
-        <div class="col-md-12 col-md-offset-0">
-          <ul class="timeline animate-box">
-            <li class="animate-box">
-              <div class="timeline-badge" style="background-image:url(images/family-1.jpg);"></div>
-              <div class="timeline-panel"><div class="timeline-heading"><h3 class="timeline-title">기쁜 소식</h3><span class="date">우리 가족에게 온 선물</span></div><div class="timeline-body"><p>소중한 생명이 찾아왔다는 소식을 듣고, 감사함과 행복으로 가득했어요.</p></div></div>
-            </li>
-            <li class="timeline-inverted animate-box">
-              <div class="timeline-badge" style="background-image:url(images/ultrasound-1.jpg);"></div>
-              <div class="timeline-panel"><div class="timeline-heading"><h3 class="timeline-title">첫 초음파</h3><span class="date">작은 심장 소리</span></div><div class="timeline-body"><p>처음 들은 심장 소리에 눈물이 핑 돌았어요. 더 큰 사랑으로 기다릴게요.</p></div></div>
-            </li>
-            <li class="animate-box">
-              <div class="timeline-badge" style="background-image:url(images/ultrasound-2.jpg);"></div>
-              <div class="timeline-panel"><div class="timeline-heading"><h3 class="timeline-title">오늘의 마음</h3><span class="date">함께 축복해주세요</span></div><div class="timeline-body"><p>늘 응원해주시고 사랑해주셔서 감사합니다. 건강하고 행복한 모습으로 인사드릴게요.</p></div></div>
-            </li>
-          </ul>
-        </div>
+    </section>
+
+    <section class="card reveal">
+      <h2>초음파 사진</h2>
+      <div class="gallery">
+        <img src="images/ultrasound-1.jpg" alt="초음파 사진 1">
+        <img src="images/ultrasound-2.jpg" alt="초음파 사진 2">
+        <img src="images/family-1.jpg" alt="가족 사진">
       </div>
-    </div>
-  </div>
+      <div class="hint">좌우로 밀어 사진을 볼 수 있어요</div>
+    </section>
 
-  <div id="fh5co-gallery" class="fh5co-section-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-          <span>Our Memories</span>
-          <h2>사진 갤러리</h2>
-        </div>
-      </div>
-      <div class="row row-bottom-padded-md">
-        <div class="col-md-12">
-          <ul id="fh5co-gallery-list">
-            <li class="one-third animate-box gallery-thumb" data-animate-effect="fadeIn" style="background-image:url(images/ultrasound-1.jpg)"><a href="images/ultrasound-1.jpg"></a></li>
-            <li class="one-third animate-box gallery-thumb" data-animate-effect="fadeIn" style="background-image:url(images/ultrasound-2.jpg)"><a href="images/ultrasound-2.jpg"></a></li>
-            <li class="one-third animate-box gallery-thumb" data-animate-effect="fadeIn" style="background-image:url(images/family-1.jpg)"><a href="images/family-1.jpg"></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <section class="card reveal">
+      <h2>감사 인사</h2>
+      <p class="muted">늘 응원해 주시고 사랑해 주셔서 감사합니다. 건강하고 행복한 모습으로 인사드릴게요 💛</p>
+    </section>
+  </main>
 
-  <div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/family-1.jpg);">
-    <div class="overlay"></div>
-    <div class="container"><div class="row animate-box"><div class="col-md-8 col-md-offset-2 text-center fh5co-heading"><h2>건강하게 만나요 💛</h2></div></div></div>
-  </div>
-</div>
+  <button id="musicToggle" class="music">🎵 음악 듣기</button>
+  <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
 
-<button id="musicToggle" class="music-fab">🎵 음악 듣기</button>
-<audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.countTo.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/magnific-popup-options.js"></script>
-<script src="js/main.js"></script>
-<script>
-const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
-btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈추기'}else{bgm.pause();on=false;btn.textContent='🎵 음악 듣기'}}catch(e){alert('음악 파일 재생에 실패했어요.')}})
-</script>
+  <script>
+    const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
+    btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈추기'}else{bgm.pause();on=false;btn.textContent='🎵 음악 듣기'}}catch(e){alert('음악 파일 재생에 실패했어요.')}})
+  </script>
 </body>
 </html>
