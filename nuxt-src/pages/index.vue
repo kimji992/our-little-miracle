@@ -28,10 +28,13 @@ const toggleMusic = async () => {
 
     <main>
       <section class="hero">
-        <img :src="'/our-little-miracle/images/family-1.jpg'" class="hero-img" alt="baby-main" />
+        <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" class="hero-img" alt="ultrasound-main" />
         <div style="margin-top:16px"><span class="badge joy-gradient">OUR LITTLE MIRACLE</span></div>
-        <h1>작고 소중한 너의 하루하루</h1>
-        <p class="lead">할아버지, 할머니께 전하는 아기의 성장 기록 💛</p>
+        <div style="margin-top:14px">
+          <img :src="'/our-little-miracle/images/ultrasound-2.jpg'" alt="ultrasound-sub" style="width:110px;height:110px;border-radius:16px;object-fit:cover;border:4px solid #fff;box-shadow:0 8px 18px rgba(0,0,0,.12)" />
+        </div>
+        <h1>할아버지, 할머니가 되신 걸<br>축하드려요</h1>
+        <p class="lead">오늘, 우리 아기를 처음으로 공개해요. 함께 축복해 주세요 💛</p>
       </section>
 
       <section class="sec">
