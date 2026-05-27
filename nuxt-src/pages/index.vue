@@ -70,7 +70,7 @@ const toggleMusic = async () => {
       </div>
     </div>
 
-    <header class="top">우리의 작은 기적</header>
+    <header class="top">초롱이를 소개합니다.</header>
 
     <main>
       <section class="hero section">
