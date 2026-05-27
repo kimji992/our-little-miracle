@@ -4,32 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>우리의 작은 기적</title>
-  <meta name="theme-color" content="#f8efe8" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero reveal">
-    <img class="hero-photo" src="images/family-1.jpg" alt="가족 사진" />
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <p class="chip">Our Little Miracle</p>
+    <img src="images/family-1.jpg" alt="가족 사진" class="hero-image" />
+    <div class="overlay"></div>
+    <div class="hero-copy">
+      <p class="kicker">OUR LITTLE MIRACLE</p>
       <h1>우리에게 소중한<br>아기가 찾아왔어요</h1>
       <p>기쁜 마음으로 임신 소식을 전해요</p>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="card reveal">
+  <main class="container">
+    <section class="panel reveal">
       <h2>기쁜 소식 전해요</h2>
       <p>사랑으로 기다리던 아기가 저희에게 와주었어요.<br>조심스럽고 감사한 마음으로 하루하루를 보내고 있습니다.</p>
     </section>
 
-    <section class="card reveal">
+    <section class="panel reveal">
       <h2>초음파 사진</h2>
-      <div class="slider" id="slider">
+      <div class="gallery" id="gallery">
         <img src="images/ultrasound-1.jpg" alt="초음파 사진 1" />
         <img src="images/ultrasound-2.jpg" alt="초음파 사진 2" />
         <img src="images/family-1.jpg" alt="가족 사진" />
@@ -37,13 +37,13 @@
       <div class="dots" id="dots"></div>
     </section>
 
-    <section class="card reveal">
+    <section class="panel reveal">
       <h2>감사 인사</h2>
-      <p>늘 응원해 주시고 사랑해 주셔서 감사합니다.<br>건강하고 행복한 모습으로 인사드릴게요 💛</p>
+      <p>늘 응원해 주시고 사랑해 주셔서 감사합니다.<br>건강하고 행복한 모습으로 인사드릴게요 🤍</p>
     </section>
   </main>
 
-  <button class="music" id="musicToggle" aria-label="음악 재생">🎵 음악 듣기</button>
+  <button id="musicToggle" class="music-btn">🎵 음악 듣기</button>
   <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
 
   <script src="script.js"></script>
