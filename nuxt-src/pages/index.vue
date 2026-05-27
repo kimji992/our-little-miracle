@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 const loading = ref(true)
 const playing = ref(false)
 const audio = ref(null)
@@ -39,7 +39,20 @@ const gallery = [
   '/our-little-miracle/images/family-1.jpg'
 ]
 
-onMounted(() => setTimeout(() => (loading.value = false), 900))
+onMounted(async () => {
+  setTimeout(() => (loading.value = false), 900)
+  await nextTick()
+  const els = document.querySelectorAll('.reveal')
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+        io.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.18 })
+  els.forEach((el) => io.observe(el))
+})
 const toggleMusic = async () => {
   if (!audio.value) return
   if (!playing.value) { await audio.value.play(); playing.value = true }
@@ -55,7 +68,7 @@ const toggleMusic = async () => {
 
     <main>
       <section class="hero section">
-        <div class="container hero-box card">
+        <div class="container hero-box card reveal hero-reveal">
           <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="hero" />
           <div class="badge">FIRST REVEAL</div>
           <h1>할아버지, 할머니가 되신 걸<br>축하드려요</h1>
@@ -65,9 +78,9 @@ const toggleMusic = async () => {
 
       <section class="section" style="padding-top:8px">
         <div class="container">
-          <h2 class="title">성장 타임라인</h2>
+          <h2 class="title reveal">성장 타임라인</h2>
           <div class="timeline">
-            <div v-for="(item, idx) in timeline" :key="item.step" class="tl-item" :class="{ reverse: idx % 2 === 1 }">
+            <div v-for="(item, idx) in timeline" :key="item.step" class="tl-item reveal" :class="{ reverse: idx % 2 === 1 }">
               <div class="tl-dotline">
                 <div class="tl-dot">{{ item.step }}</div>
               </div>
@@ -86,9 +99,9 @@ const toggleMusic = async () => {
 
       <section class="section" style="padding-top:0">
         <div class="container">
-          <h2 class="title">Gallery</h2>
+          <h2 class="title reveal">Gallery</h2>
           <div class="gallery-grid">
-            <div v-for="(img, i) in gallery" :key="i" class="g-item" :class="`g-${i % 8}`">
+            <div v-for="(img, i) in gallery" :key="i" class="g-item reveal" :class="`g-${i % 8}`">
               <img :src="img" :alt="`gallery-${i}`" />
             </div>
           </div>
