@@ -1,14 +1,15 @@
-<script setup>
-if (import.meta.client) {
-  window.location.replace('https://www.miricanvas.com/v2/ko/design2/v/23b88770-45df-46ff-a256-e867edcda872')
-}
-</script>
-
 <template>
-  <main style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-family:system-ui,sans-serif;">
-    <div>
-      <p>미리캔버스로 이동 중입니다…</p>
-      <a href="https://www.miricanvas.com/v2/ko/design2/v/23b88770-45df-46ff-a256-e867edcda872">직접 열기</a>
-    </div>
+  <main class="page">
+    <section class="hero">
+      <img class="hero-img" :src="'/our-little-miracle/images/cholong-main.jpg'" alt="초롱이" />
+      <p class="line">할아버지, 할머니 초롱이 왔어요.</p>
+    </section>
+
+    <section class="gallery">
+      <img :src="'/our-little-miracle/images/cholong-main.jpg'" alt="g1" />
+      <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="g2" />
+      <img :src="'/our-little-miracle/images/ultrasound-2.jpg'" alt="g3" />
+      <img :src="'/our-little-miracle/images/family-1.jpg'" alt="g4" />
+    </section>
   </main>
 </template>
