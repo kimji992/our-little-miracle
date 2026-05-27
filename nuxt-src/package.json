@@ -1,12 +1,7 @@
 {
-  "name": "our-little-miracle-nuxt",
+  "name": "nuxt-view",
   "private": true,
   "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "nuxt": "^3.13.2"
-  }
+  "scripts": {"generate": "nuxt generate"},
+  "dependencies": {"nuxt": "^3.13.2"}
 }
