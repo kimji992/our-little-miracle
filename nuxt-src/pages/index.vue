@@ -65,7 +65,7 @@ const toggleMusic = async () => {
     <div class="loader" :class="{ hide: !loading }">
       <div class="loader-box">
         <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="loading-ultrasound" class="loader-img" />
-        <div class="loader-text">할아버지 할머니 되는중</div>
+        <div class="loader-text">손주 만나러 가는중</div>
         <div class="loader-progress"><span class="loader-bar"></span></div>
       </div>
     </div>
