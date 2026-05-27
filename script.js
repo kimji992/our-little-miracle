@@ -1,37 +1,22 @@
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      e.target.classList.add('show');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.16 });
-document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-const petals = document.querySelector('.petals');
-for (let i = 0; i < 12; i++) {
-  const s = document.createElement('span');
-  s.style.left = `${Math.random() * 100}%`;
-  s.style.animationDelay = `${Math.random() * 8}s`;
-  s.style.animationDuration = `${12 + Math.random() * 9}s`;
-  petals.appendChild(s);
-}
+const slider=document.getElementById('slider');
+const dots=document.getElementById('dots');
+const count=slider.querySelectorAll('img').length;
+for(let i=0;i<count;i++){const b=document.createElement('button');if(i===0)b.classList.add('active');dots.appendChild(b)}
+const dotEls=[...dots.children];
+slider.addEventListener('scroll',()=>{
+  const idx=Math.round(slider.scrollLeft/slider.clientWidth);
+  dotEls.forEach((d,i)=>d.classList.toggle('active',i===idx));
+});
 
-const btn = document.getElementById('musicToggle');
-const bgm = document.getElementById('bgm');
-let playing = false;
-btn.addEventListener('click', async () => {
-  try {
-    if (!playing) {
-      await bgm.play();
-      playing = true;
-      btn.textContent = '⏸️ 음악 멈추기';
-    } else {
-      bgm.pause();
-      playing = false;
-      btn.textContent = '🎵 음악 듣기';
-    }
-  } catch {
-    alert('audio/bgm.mp3 파일을 업로드해 주세요.');
-  }
+const btn=document.getElementById('musicToggle');
+const bgm=document.getElementById('bgm');
+let on=false;
+btn.addEventListener('click',async()=>{
+  try{
+    if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈추기'}
+    else{bgm.pause();on=false;btn.textContent='🎵 음악 듣기'}
+  }catch(e){alert('음악 파일 로드에 실패했어요.')}
 });

@@ -4,57 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>우리의 작은 기적</title>
-  <meta name="theme-color" content="#f7ede2" />
+  <meta name="theme-color" content="#f8efe8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="petals" aria-hidden="true"></div>
-
   <header class="hero reveal">
-    <div class="hero-inner">
-      <p class="eyebrow">Our Little Miracle</p>
+    <img class="hero-photo" src="images/family-1.jpg" alt="가족 사진" />
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <p class="chip">Our Little Miracle</p>
       <h1>우리에게 소중한<br>아기가 찾아왔어요</h1>
-      <p class="lead">작은 심장 소리를 처음 들은 날,<br>우리의 세상은 더 따뜻해졌습니다.</p>
+      <p>기쁜 마음으로 임신 소식을 전해요</p>
     </div>
   </header>
 
-  <main class="container">
+  <main class="wrap">
     <section class="card reveal">
       <h2>기쁜 소식 전해요</h2>
       <p>사랑으로 기다리던 아기가 저희에게 와주었어요.<br>조심스럽고 감사한 마음으로 하루하루를 보내고 있습니다.</p>
     </section>
 
     <section class="card reveal">
-      <h2>우리의 시간</h2>
-      <ul class="timeline">
-        <li><span>처음 알게 된 날</span><strong>설렘 가득한 시작</strong></li>
-        <li><span>첫 심장소리</span><strong>눈물이 핑 돌던 순간</strong></li>
-        <li><span>오늘의 마음</span><strong>건강하게 만나길 기도해요</strong></li>
-      </ul>
-    </section>
-
-    <section class="card reveal">
-      <h2>아기 사진</h2>
-      <div class="gallery" aria-label="사진 갤러리">
+      <h2>초음파 사진</h2>
+      <div class="slider" id="slider">
         <img src="images/ultrasound-1.jpg" alt="초음파 사진 1" />
         <img src="images/ultrasound-2.jpg" alt="초음파 사진 2" />
         <img src="images/family-1.jpg" alt="가족 사진" />
       </div>
-      <p class="help">좌우로 밀어서 사진을 볼 수 있어요.</p>
+      <div class="dots" id="dots"></div>
     </section>
 
     <section class="card reveal">
-      <h2>감사한 마음</h2>
-      <p>늘 저희를 아껴주시고 응원해주셔서 감사합니다.<br>건강하고 행복한 모습으로 인사드릴게요 💛</p>
+      <h2>감사 인사</h2>
+      <p>늘 응원해 주시고 사랑해 주셔서 감사합니다.<br>건강하고 행복한 모습으로 인사드릴게요 💛</p>
     </section>
   </main>
 
-  <button id="musicToggle" class="music-fab" aria-label="배경음악 재생 버튼">🎵 음악 듣기</button>
+  <button class="music" id="musicToggle" aria-label="음악 재생">🎵 음악 듣기</button>
+  <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
 
-  <audio id="bgm" src="audio/bgm.mp3" loop preload="none"></audio>
   <script src="script.js"></script>
 </body>
 </html>
