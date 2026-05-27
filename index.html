@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>우리의 작은 기적</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="hero section reveal">
+    <p class="badge">Our Little Miracle 👶</p>
+    <h1>우리에게 소중한 아기가 찾아왔어요</h1>
+    <p class="sub">기쁜 마음으로 임신 소식을 전해요.</p>
+    <button id="musicToggle" class="music-btn" aria-label="배경음악 재생/정지">
+      🎵 음악 듣기
+    </button>
+  </header>
+
+  <main>
+    <section class="section card reveal">
+      <h2>처음 알게 된 날</h2>
+      <p>
+        설레고 벅찬 하루였어요. 작은 생명이 우리 가족에게 와주었다는 사실이
+        믿기지 않으면서도, 마음 깊이 감사함이 차올랐어요.
+      </p>
+    </section>
+
+    <section class="section card reveal">
+      <h2>지금의 마음</h2>
+      <p>
+        하루하루 건강하게 자라나길 바라는 마음으로 조심스럽고 따뜻하게
+        시간을 보내고 있어요. 함께 축복해 주시면 큰 힘이 됩니다.
+      </p>
+    </section>
+
+    <section class="section card reveal">
+      <h2>아기 사진</h2>
+      <div class="photo-grid">
+        <figure><img src="images/ultrasound-1.jpg" alt="초음파 사진 1" /></figure>
+        <figure><img src="images/ultrasound-2.jpg" alt="초음파 사진 2" /></figure>
+        <figure><img src="images/family-1.jpg" alt="가족 사진" /></figure>
+      </div>
+      <p class="hint">※ 사진은 원하는 파일로 교체해 주세요.</p>
+    </section>
+
+    <section class="section card reveal">
+      <h2>감사 인사</h2>
+      <p>
+        늘 응원해 주시고 사랑해 주셔서 감사합니다.<br/>
+        건강하고 행복한 모습으로 인사드릴게요 💛
+      </p>
+    </section>
+  </main>
+
+  <footer class="section reveal footer">
+    <p>건강하게 만나요</p>
+  </footer>
+
+  <audio id="bgm" src="audio/bgm.mp3" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
