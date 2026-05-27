@@ -6,35 +6,35 @@ const timeline = [
   {
     step: '01',
     title: '임테기 확인',
-    date: '두 줄의 기적',
-    text: '작은 표시 두 줄에 온 세상이 달라진 날',
-    image: '/our-little-miracle/images/family-1.jpg'
+    date: '두 줄의 시작',
+    text: '우리 가족의 첫 소식',
+    image: '/our-little-miracle/images/timeline-1-test.jpg'
   },
   {
     step: '02',
-    title: '병원에서 처음 엄마 만난 날',
-    date: '첫 초음파',
-    text: '병원에서 처음 마주한 초롱이의 모습',
-    image: '/our-little-miracle/images/ultrasound-1.jpg'
+    title: '아빠된거 축하해',
+    date: '기쁜 고백',
+    text: '아빠가 되는 순간',
+    image: '/our-little-miracle/images/timeline-2-dad.jpg'
   },
   {
     step: '03',
-    title: '아빠 만난 날',
-    date: '함께 들은 심장소리',
-    text: '아빠가 처음 보고 듣고 더 사랑하게 된 순간',
-    image: '/our-little-miracle/images/ultrasound-2.jpg'
+    title: '초음파 사진',
+    date: '초롱이 첫 인사',
+    text: '작은 심장 소리와 함께',
+    image: '/our-little-miracle/images/timeline-3-ultrasound.jpg'
   }
 ]
 
 const gallery = [
-  '/our-little-miracle/images/ultrasound-1.jpg',
-  '/our-little-miracle/images/ultrasound-2.jpg',
-  '/our-little-miracle/images/family-1.jpg',
-  '/our-little-miracle/images/ultrasound-1.jpg',
-  '/our-little-miracle/images/ultrasound-2.jpg',
-  '/our-little-miracle/images/family-1.jpg',
-  '/our-little-miracle/images/ultrasound-1.jpg',
-  '/our-little-miracle/images/family-1.jpg'
+  '/our-little-miracle/images/timeline-1-test.jpg',
+  '/our-little-miracle/images/timeline-2-dad.jpg',
+  '/our-little-miracle/images/timeline-3-ultrasound.jpg',
+  '/our-little-miracle/images/cholong-main.jpg',
+  '/our-little-miracle/images/timeline-1-test.jpg',
+  '/our-little-miracle/images/timeline-2-dad.jpg',
+  '/our-little-miracle/images/timeline-3-ultrasound.jpg',
+  '/our-little-miracle/images/cholong-main.jpg'
 ]
 
 onMounted(async () => {
