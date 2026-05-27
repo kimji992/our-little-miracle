@@ -1,321 +1,99 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="ko"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>우리의 작은 기적</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-error": "#ffffff",
-                    "surface-container-highest": "#e1e3e4",
-                    "on-error-container": "#93000a",
-                    "background": "#f8f9fa",
-                    "on-tertiary": "#ffffff",
-                    "tertiary-fixed-dim": "#d8c93b",
-                    "surface-variant": "#e1e3e4",
-                    "inverse-surface": "#2e3132",
-                    "secondary-fixed": "#bee9ff",
-                    "on-secondary": "#ffffff",
-                    "primary-fixed-dim": "#4fddb2",
-                    "on-secondary-fixed-variant": "#004d64",
-                    "secondary-container": "#88d9fe",
-                    "surface-container-lowest": "#ffffff",
-                    "inverse-primary": "#4fddb2",
-                    "on-primary-container": "#005a44",
-                    "on-tertiary-container": "#575000",
-                    "on-tertiary-fixed-variant": "#4e4800",
-                    "secondary-fixed-dim": "#80d1f5",
-                    "on-primary-fixed-variant": "#00513d",
-                    "surface": "#f8f9fa",
-                    "outline-variant": "#bbcac2",
-                    "error-container": "#ffdad6",
-                    "on-secondary-container": "#005f7c",
-                    "surface-container": "#edeeef",
-                    "surface-dim": "#d9dadb",
-                    "on-background": "#191c1d",
-                    "tertiary": "#686000",
-                    "error": "#ba1a1a",
-                    "tertiary-fixed": "#f5e555",
-                    "surface-container-low": "#f3f4f5",
-                    "surface-tint": "#006c52",
-                    "primary-fixed": "#70facd",
-                    "secondary": "#006684",
-                    "surface-bright": "#f8f9fa",
-                    "on-tertiary-fixed": "#1f1c00",
-                    "tertiary-container": "#d2c335",
-                    "surface-container-high": "#e7e8e9",
-                    "primary-container": "#47d7ac",
-                    "on-primary": "#ffffff",
-                    "primary": "#006c52",
-                    "outline": "#6c7a73",
-                    "on-secondary-fixed": "#001f2a",
-                    "on-surface": "#191c1d",
-                    "on-surface-variant": "#3c4a44",
-                    "on-primary-fixed": "#002117",
-                    "inverse-on-surface": "#f0f1f2"
-            },
-            "borderRadius": {
-                    "DEFAULT": "1rem",
-                    "lg": "2rem",
-                    "xl": "3rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "section-gap-desktop": "120px",
-                    "gutter": "24px",
-                    "base": "8px",
-                    "section-gap-mobile": "64px",
-                    "container-padding": "32px"
-            },
-            "fontFamily": {
-                    "display-lg-mobile": ["Quicksand"],
-                    "display-lg": ["Quicksand"],
-                    "body-lg": ["Quicksand"],
-                    "label-md": ["Quicksand"],
-                    "body-md": ["Quicksand"],
-                    "headline-sm": ["Quicksand"],
-                    "headline-md": ["Quicksand"]
-            },
-            "fontSize": {
-                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "500"}],
-                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+  tailwind.config={theme:{extend:{colors:{background:'#f8f9fa',surface:'#ffffff',primary:'#006c52',secondary:'#006684',muted:'#5f6368',line:'#e5e7eb',accent:'#47d7ac',accent2:'#88d9fe'},fontFamily:{main:['Quicksand']}}}}
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            line-height: 1;
-        }
-        .joy-gradient {
-            background: linear-gradient(135deg, #47d7ac 0%, #88d9fe 100%);
-        }
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-        }
-    </style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+  .joy-gradient{background:linear-gradient(135deg,#47d7ac 0%,#88d9fe 100%)}
+  .floating{animation:floating 3s ease-in-out infinite}
+  @keyframes floating{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+</style>
 </head>
-<body class="bg-background text-on-background font-body-md overflow-x-hidden">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-on-background/80 backdrop-blur-md shadow-sm shadow-primary/5 flex justify-between items-center px-gutter py-4 w-full">
-<div class="flex items-center gap-2 active:scale-95 transition-transform duration-200">
-<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="arrow_back">arrow_back</span>
-</div>
-<h1 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm text-primary dark:text-primary-fixed tracking-tight">우리의 작은 기적</h1>
-<div class="flex items-center gap-2 active:scale-95 transition-transform duration-200">
-<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="share">share</span>
-</div>
+<body class="bg-background text-gray-900 font-main overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-line/70 flex justify-between items-center px-6 py-4">
+  <span class="material-symbols-outlined text-primary">favorite</span>
+  <h1 class="text-xl font-semibold text-primary tracking-tight">우리의 작은 기적</h1>
+  <span class="material-symbols-outlined text-primary">share</span>
 </header>
+
 <main class="pt-20">
-<!-- Hero Section: 임밍아웃 -->
-<section class="min-h-screen flex flex-col items-center justify-center px-container-padding text-center py-section-gap-mobile md:py-section-gap-desktop">
-<div class="relative mb-base">
-<div class="absolute -inset-4 bg-tertiary-container/30 rounded-full blur-2xl"></div>
-<img alt="Baby Shoes" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg shadow-primary/10 relative floating" data-alt="A pair of miniature white knitted baby socks placed delicately on a soft, light mint green linen surface. The lighting is airy, high-key, and bright, evoking a modern and joyful pregnancy announcement aesthetic. Soft shadows and a clean composition create a sense of weightless anticipation and cheerful minimalism. The overall mood is fresh and modern." src="images/family-1.jpg"/>
-</div>
-<div class="space-y-4 max-w-2xl">
-<span class="bg-tertiary text-on-tertiary px-4 py-1 rounded-full font-label-md text-label-md uppercase tracking-widest">임밍아웃</span>
-<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">우리에게 소중한 아기가 찾아왔어요</h2>
-<div class="w-48 h-3 bg-surface-container rounded-full mx-auto overflow-hidden">
-<div class="h-full joy-gradient w-[75%] rounded-full"></div>
-</div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">기쁜 마음으로 임신 소식을 전합니다.</p>
-</div>
+<section class="min-h-screen flex flex-col items-center justify-center px-8 text-center py-16">
+  <div class="relative mb-4">
+    <div class="absolute -inset-4 bg-accent2/30 rounded-full blur-2xl"></div>
+    <img src="images/family-1.jpg" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg relative floating" alt="메인"/>
+  </div>
+  <div class="space-y-4 max-w-2xl">
+    <span class="joy-gradient text-white px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-widest">임밍아웃</span>
+    <h2 class="text-4xl md:text-5xl font-bold text-primary leading-tight">우리에게 소중한<br/>아기가 찾아왔어요</h2>
+    <p class="text-lg text-muted">기쁜 마음으로 임신 소식을 전합니다 💛</p>
+  </div>
 </section>
-<!-- Greeting Section -->
-<section class="bg-primary-container/20 py-section-gap-mobile md:py-section-gap-desktop px-container-padding text-center">
-<div class="max-w-4xl mx-auto space-y-base">
-<span class="material-symbols-outlined text-primary text-5xl" data-icon="celebration">celebration</span>
-<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed-dim bg-primary px-6 py-4 rounded-xl inline-block shadow-lg">
-                    기쁜 소식 전해요
-                </h2>
-<p class="font-headline-md text-headline-md-mobile md:text-headline-md text-secondary mt-8">
-                    저희에게 소중한 생명이 찾아왔어요.<br class="md:hidden"/> <span class="text-primary font-bold">함께 축복해 주세요!</span>
-</p>
-<div class="flex justify-center gap-4 mt-8">
-<div class="p-4 bg-white rounded-lg shadow-sm transform -rotate-3 border border-primary/10">
-<span class="material-symbols-outlined text-tertiary" data-icon="child_care">child_care</span>
-</div>
-<div class="p-4 bg-white rounded-lg shadow-sm transform rotate-3 border border-secondary/10">
-<span class="material-symbols-outlined text-secondary" data-icon="favorite">favorite</span>
-</div>
-</div>
-</div>
+
+<section class="py-16 px-8 bg-accent/10 text-center">
+  <div class="max-w-4xl mx-auto space-y-4">
+    <span class="material-symbols-outlined text-primary text-5xl">celebration</span>
+    <h3 class="text-3xl md:text-4xl font-bold text-primary">기쁜 소식 전해요</h3>
+    <p class="text-xl text-secondary">설레고 감사한 마음으로<br class="md:hidden"/> 하루하루를 보내고 있어요.</p>
+  </div>
 </section>
-<!-- Timeline Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-container-padding max-w-6xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-headline-md text-headline-md text-on-surface">우리의 이야기</h2>
-<div class="w-16 h-1 joy-gradient mx-auto mt-4 rounded-full"></div>
-</div>
-<div class="relative">
-<!-- Vertical Line -->
-<div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-surface-container-highest rounded-full hidden md:block"></div>
-<div class="space-y-16 md:space-y-32">
-<!-- 6 Weeks -->
-<div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-<div class="md:w-1/2 md:pr-16 text-center md:text-right">
-<span class="font-label-md text-label-md text-primary bg-primary-container/30 px-3 py-1 rounded-full">6 Weeks</span>
-<h3 class="font-headline-sm text-headline-sm mt-2">처음 알게 된 날</h3>
-<p class="text-on-surface-variant mt-2">The very first time we saw our tiny miracle. Just a speck on the screen, but already filling our hearts.</p>
-</div>
-<div class="relative z-10 w-12 h-12 rounded-full joy-gradient border-4 border-white shadow-md hidden md:flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-sm" data-icon="fiber_manual_record">fiber_manual_record</span>
-</div>
-<div class="md:w-1/2 md:pl-16">
-<div class="bg-white p-4 rounded-lg shadow-sm shadow-primary/5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-<div class="aspect-[4/3] overflow-hidden rounded">
-<img alt="6 Weeks Ultrasound" class="w-full h-full object-cover" src="images/ultrasound-1.jpg"/>
-</div>
-</div>
-</div>
-</div>
-<!-- 12 Weeks -->
-<div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-0">
-<div class="md:w-1/2 md:pl-16 text-center md:text-left">
-<span class="font-label-md text-label-md text-secondary bg-secondary-container/30 px-3 py-1 rounded-full">12 Weeks</span>
-<h3 class="font-headline-sm text-headline-sm mt-2">첫 심장 소리</h3>
-<p class="text-on-surface-variant mt-2">Dancing around and showing off for the camera. Waving hello to the world for the first time!</p>
-</div>
-<div class="relative z-10 w-12 h-12 rounded-full joy-gradient border-4 border-white shadow-md hidden md:flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-sm" data-icon="waves">waves</span>
-</div>
-<div class="md:w-1/2 md:pr-16">
-<div class="bg-white p-4 rounded-lg shadow-sm shadow-primary/5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-<div class="aspect-[4/3] overflow-hidden rounded">
-<img alt="12 Weeks Ultrasound" class="w-full h-full object-cover" src="images/ultrasound-2.jpg"/>
-</div>
-</div>
-</div>
-</div>
-<!-- 20 Weeks -->
-<div class="flex flex-col md:flex-row items-center gap-8 md:gap-0">
-<div class="md:w-1/2 md:pr-16 text-center md:text-right">
-<span class="font-label-md text-label-md text-tertiary bg-tertiary-container/30 px-3 py-1 rounded-full">20 Weeks</span>
-<h3 class="font-headline-sm text-headline-sm mt-2">오늘의 마음</h3>
-<p class="text-on-surface-variant mt-2">Look at that sweet profile! Everything is perfect, and the kicks are getting stronger every day.</p>
-</div>
-<div class="relative z-10 w-12 h-12 rounded-full joy-gradient border-4 border-white shadow-md hidden md:flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-sm" data-icon="favorite">favorite</span>
-</div>
-<div class="md:w-1/2 md:pl-16">
-<div class="bg-white p-4 rounded-lg shadow-sm shadow-primary/5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-<div class="aspect-square overflow-hidden rounded">
-<img alt="20 Weeks 3D Ultrasound" class="w-full h-full object-cover" src="images/family-1.jpg"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<section class="py-16 px-8 max-w-5xl mx-auto">
+  <div class="text-center mb-10">
+    <h3 class="text-3xl font-semibold">우리의 이야기</h3>
+    <div class="w-16 h-1 joy-gradient mx-auto mt-3 rounded-full"></div>
+  </div>
+  <div class="space-y-10">
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div class="text-center md:text-right"><span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-primary text-sm font-semibold">처음 알게 된 날</span><p class="mt-3 text-muted">작은 생명이 찾아왔다는 사실에 벅차고 감사했어요.</p></div>
+      <div class="bg-white p-3 rounded-2xl border border-line shadow-sm"><img src="images/ultrasound-1.jpg" class="w-full aspect-[4/3] object-cover rounded-xl" alt="ultra1"/></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div class="md:order-2 text-center md:text-left"><span class="inline-block px-3 py-1 rounded-full bg-sky-100 text-secondary text-sm font-semibold">첫 심장 소리</span><p class="mt-3 text-muted">처음 들은 두근거림에 눈물이 핑 돌았어요.</p></div>
+      <div class="md:order-1 bg-white p-3 rounded-2xl border border-line shadow-sm"><img src="images/ultrasound-2.jpg" class="w-full aspect-[4/3] object-cover rounded-xl" alt="ultra2"/></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 items-center">
+      <div class="text-center md:text-right"><span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-sm font-semibold">오늘의 마음</span><p class="mt-3 text-muted">건강하게 만나길 기도하며 기다리고 있어요.</p></div>
+      <div class="bg-white p-3 rounded-2xl border border-line shadow-sm"><img src="images/family-1.jpg" class="w-full aspect-[4/3] object-cover rounded-xl" alt="family"/></div>
+    </div>
+  </div>
 </section>
-<!-- Letter Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-container-padding bg-surface-container-low">
-<div class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-xl shadow-sm border border-primary/5 relative overflow-hidden">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
-<div class="relative z-10">
-<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="edit_note">edit_note</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-8">사랑하는 가족께,</h2>
-<div class="font-body-lg text-body-lg text-on-surface-variant space-y-6 leading-relaxed">
-<p>설레고 벅찬 마음으로 임신 소식을 전해요.</p>
-<p>작은 심장 소리를 들은 날부터 하루하루 감사한 마음으로 지내고 있어요.</p>
-<p>따뜻한 응원과 축복 부탁드려요.</p>
-<p class="font-headline-sm text-primary">건강하게 만나요 💛</p>
-</div>
-</div>
-</div>
+
+<section class="py-16 px-8 bg-gray-50">
+  <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl border border-line shadow-sm">
+    <h3 class="text-3xl font-semibold text-primary mb-6">사랑하는 가족께</h3>
+    <div class="space-y-4 text-lg text-muted leading-relaxed">
+      <p>작은 기적이 저희에게 찾아왔어요.</p>
+      <p>따뜻한 응원 덕분에 행복한 마음으로 하루하루를 보내고 있습니다.</p>
+      <p>앞으로도 함께 축복해 주세요.</p>
+      <p class="text-primary font-semibold">건강하게 만나요 💛</p>
+    </div>
+  </div>
 </section>
-<!-- Message Box / Guestbook -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-container-padding max-w-4xl mx-auto text-center">
-<div class="mb-12">
-<h2 class="font-headline-md text-headline-md text-on-surface">한 줄 축하</h2>
-<p class="text-on-surface-variant mt-2">축복의 마음을 남겨주시면 큰 힘이 됩니다.</p>
-</div>
-<div class="bg-white p-6 md:p-10 rounded-lg shadow-sm border border-secondary/10">
-<form class="space-y-6 text-left" id="guestbook">
-<div>
-<label class="font-label-md text-label-md text-on-surface-variant ml-1">이름</label>
-<input class="w-full mt-1 p-4 rounded-lg bg-surface border-primary/20 focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none transition-all" placeholder="홍길동" type="text"/>
-</div>
-<div>
-<label class="font-label-md text-label-md text-on-surface-variant ml-1">메시지</label>
-<textarea class="w-full mt-1 p-4 rounded-lg bg-surface border-primary/20 focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none transition-all" placeholder="축하해요! 건강하게 만나자 💛" rows="4"></textarea>
-</div>
-<button class="w-full joy-gradient text-white font-headline-sm py-4 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all hover:brightness-105" onclick="handleSubmit()" type="button">
-                        메시지 남기기
-                    </button>
-</form>
-<div class="hidden py-8" id="success-msg">
-<span class="material-symbols-outlined text-primary text-6xl" data-icon="check_circle">check_circle</span>
-<p class="font-headline-sm text-primary mt-4">메시지가 저장되었어요!</p>
-</div>
-</div>
+
+<section class="py-16 px-8 max-w-4xl mx-auto text-center">
+  <h3 class="text-3xl font-semibold">한 줄 축하</h3>
+  <p class="text-muted mt-2 mb-8">축복의 마음을 남겨주시면 큰 힘이 됩니다.</p>
+  <div class="bg-white p-6 md:p-8 rounded-2xl border border-line shadow-sm text-left">
+    <div class="space-y-5">
+      <input class="w-full p-4 rounded-xl border border-line focus:ring-2 focus:ring-accent2" placeholder="이름" type="text"/>
+      <textarea class="w-full p-4 rounded-xl border border-line focus:ring-2 focus:ring-accent2" rows="4" placeholder="축하 메시지를 남겨주세요"></textarea>
+      <button type="button" class="w-full joy-gradient text-white font-semibold py-4 rounded-full">메시지 남기기</button>
+    </div>
+  </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-section-gap-mobile md:py-12 mt-auto bg-surface-container-low dark:bg-on-background flex flex-col items-center justify-center gap-base px-container-padding text-center">
-<h2 class="font-display-lg text-primary">우리의 작은 기적</h2>
-<div class="flex gap-gutter mb-4">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Privacy</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">메시지 남기기</a>
-</div>
-<p class="font-label-md text-label-md text-secondary dark:text-secondary-fixed">우리의 작은 기적</p>
-</footer>
+
+<button id="musicToggle" class="fixed right-4 bottom-4 joy-gradient text-white px-4 py-3 rounded-full shadow-lg font-semibold z-50">🎵 음악 재생</button>
+<audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
 <script>
-        function handleSubmit() {
-            const form = document.getElementById('guestbook');
-            const success = document.getElementById('success-msg');
-            form.classList.add('opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                form.classList.add('hidden');
-                success.classList.remove('hidden');
-                success.classList.add('animate-bounce');
-            }, 300);
-        }
-
-        // Simple parallax-like reveal on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
-        });
-    </script>
+const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
+btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈춤'}else{bgm.pause();on=false;btn.textContent='🎵 음악 재생'}}catch(e){alert('음악 파일 재생에 실패했어요')}})
+</script>
 </body></html>
