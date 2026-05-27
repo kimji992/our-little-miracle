@@ -9,7 +9,16 @@
     :root{--bg:#fff8f2;--paper:#fffdf9;--line:#f1e3d8;--txt:#2c2724;--muted:#7d6f66;--point:#ef9f79}
     *{box-sizing:border-box} html,body{margin:0;padding:0}
     body{font-family:Pretendard,sans-serif;background:var(--bg);color:var(--txt);line-height:1.74}
-    .pattern{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 8% 15%,#ffe8d7 0 7px,transparent 8px),radial-gradient(circle at 92% 20%,#ffe8d7 0 8px,transparent 9px),radial-gradient(circle at 14% 76%,#ffe8d7 0 7px,transparent 8px),radial-gradient(circle at 85% 86%,#ffe8d7 0 8px,transparent 9px),linear-gradient(#fff8f2,#fff8f2)}
+    body.loaded .loader{opacity:0;pointer-events:none}
+    .loader{position:fixed;inset:0;z-index:9999;background:linear-gradient(180deg,#fff8f2,#fff3ea);display:flex;align-items:center;justify-content:center;transition:opacity .6s ease}
+    .loader-inner{text-align:center;color:#7f6554}
+    .loader-title{font-family:'Gowun Batang',serif;font-size:1.7rem;margin-bottom:8px}
+    .loader-sub{font-size:.95rem;opacity:.8;margin-bottom:16px}
+    .dots{display:flex;gap:8px;justify-content:center}
+    .dots span{width:8px;height:8px;border-radius:50%;background:#e9b797;animation:bounce 1s infinite ease-in-out}
+    .dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
+    @keyframes bounce{0%,80%,100%{transform:scale(.7);opacity:.6}40%{transform:scale(1);opacity:1}}
+    .pattern{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 8% 15%,#ffe8d7 0 7px,transparent 8px),radial-gradient(circle at 92% 20%,#ffe8d7 0 8px,transparent 9px),radial-gradient(circle at 14% 76%,#ffe8d7 0 7px,transparent 8px),radial-gradient(circle at 85% 86%,#ffe8d7 0 8px,transparent 9px),linear-gradient(#fff8f2,#fff8f2)
     .hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden}
     .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.03)}
     .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.62))}
@@ -55,6 +64,7 @@
   </style>
 </head>
 <body>
+<div class="loader" id="loader"><div class="loader-inner"><div class="loader-title">우리 아기 첫 돌잔치</div><div class="loader-sub">초대장을 준비하고 있어요</div><div class="dots"><span></span><span></span><span></span></div></div></div>
 <div class="pattern"></div>
 <section class="hero"><img src="images/family-1.jpg" alt="메인"><div class="copy"><span class="chip">🎂 1st Birthday Invitation</span><h1>우리 아기 첫 돌잔치</h1><div class="sub">소중한 첫 생일에 여러분을 초대합니다</div></div></section>
 <main class="wrap">
@@ -72,6 +82,10 @@
 </main>
 <button id="musicToggle" class="music">🎵 음악 재생</button>
 <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
-<script>const b=document.getElementById('musicToggle'),a=document.getElementById('bgm');let on=false;b.onclick=async()=>{try{if(!on){await a.play();on=true;b.textContent='⏸️ 음악 멈춤'}else{a.pause();on=false;b.textContent='🎵 음악 재생'}}catch(e){alert('음악 파일 재생 실패')}};</script>
+<script>
+const b=document.getElementById('musicToggle'),a=document.getElementById('bgm');let on=false;
+window.addEventListener('load',()=>setTimeout(()=>document.body.classList.add('loaded'),900));
+b.onclick=async()=>{try{if(!on){await a.play();on=true;b.textContent='⏸️ 음악 멈춤'}else{a.pause();on=false;b.textContent='🎵 음악 재생'}}catch(e){alert('음악 파일 재생 실패')}};
+</script>
 </body>
 </html>
