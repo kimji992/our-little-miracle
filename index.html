@@ -3,94 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>우리의 작은 기적</title>
-  <meta name="theme-color" content="#f5f2ee" />
+  <title>우리 아기 첫 생일 초대장</title>
+  <meta name="theme-color" content="#fff7ef" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f5f2ee;--card:#ffffffcc;--text:#171717;--muted:#666;--line:#e8e2da;--accent:#111;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 500px at 50% -200px,#fff,#f5f2ee 60%);
-      font-size:18px; line-height:1.7;
-    }
+    :root{--bg:#fff7ef;--card:#fff;--text:#2b2622;--muted:#76695f;--accent:#ff8f6b;--line:#f3e2d2}
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:'Pretendard',sans-serif;background:linear-gradient(180deg,#fff8f1,#fffefc);color:var(--text);font-size:18px;line-height:1.7}
     .wrap{width:min(92vw,760px);margin:0 auto 110px}
-    .hero{min-height:72vh;display:flex;align-items:flex-end;padding:24px 0 20px;position:relative}
-    .hero-photo{position:absolute;inset:0;border-radius:0 0 26px 26px;overflow:hidden}
-    .hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.03)}
-    .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.55))}
-    .hero-copy{position:relative;z-index:2;color:#fff;padding:0 18px 20px}
-    .kicker{font-size:12px;letter-spacing:2px;font-weight:700;opacity:.92}
-    h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,10vw,68px);line-height:1.04;margin:8px 0}
-    .subtitle{font-size:clamp(20px,4.6vw,28px);opacity:.96;margin:0}
-
-    .card{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 18px;margin:14px 0;box-shadow:0 14px 34px rgba(0,0,0,.06)}
-    h2{font-size:clamp(26px,6vw,34px);line-height:1.2;margin:0 0 10px;font-weight:800}
-    p{margin:0}
+    .hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;border-radius:0 0 28px 28px;overflow:hidden}
+    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.55))}
+    .hero-copy{position:relative;z-index:2;color:#fff;padding:24px 18px 28px}
+    .chip{display:inline-block;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700}
+    h1{font-family:'Gowun Batang',serif;font-size:clamp(38px,9vw,60px);line-height:1.15;margin:10px 0 8px}
+    .sub{font-size:clamp(20px,4.7vw,28px);margin:0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 18px;margin:14px 0;box-shadow:0 12px 30px rgba(120,90,60,.08)}
+    h2{font-size:clamp(26px,6vw,34px);margin:0 0 10px;font-weight:800}
     .muted{color:var(--muted)}
-
-    .timeline{display:grid;gap:10px}
-    .timeline-item{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}
-    .timeline-item strong{display:block;font-size:22px;margin-bottom:4px}
-
-    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
-    .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;scroll-snap-align:center;background:#eee}
-    .hint{font-size:14px;color:#7a7a7a;margin-top:8px}
-
-    .music{
-      position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:99;
-      border:0;border-radius:999px;padding:14px 17px;font-size:16px;font-weight:800;
-      background:#111;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.24)
-    }
-
-    .reveal{opacity:0;transform:translateY(14px);transition:all .7s ease}
-    .reveal.show{opacity:1;transform:none}
+    .info{display:grid;gap:10px}.info div{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:14px}
+    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow:auto;scroll-snap-type:x mandatory}
+    .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;scroll-snap-align:center;background:#f4ede7}
+    .music{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:99;border:0;border-radius:999px;padding:14px 17px;font-size:16px;font-weight:800;background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+    .reveal{opacity:0;transform:translateY(12px);transition:all .7s ease}.reveal.show{opacity:1;transform:none}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero reveal">
-      <div class="hero-photo"><img src="images/family-1.jpg" alt="가족 사진"></div>
+      <img src="images/family-1.jpg" alt="아기 가족 사진" />
       <div class="hero-copy">
-        <div class="kicker">OUR LITTLE MIRACLE</div>
-        <h1>Baby<br>On The Way</h1>
-        <p class="subtitle">우리에게 소중한 아기가 찾아왔어요</p>
+        <span class="chip">1st Birthday Invitation</span>
+        <h1>우리 아기<br>첫 돌잔치</h1>
+        <p class="sub">소중한 첫 생일에 여러분을 초대합니다</p>
       </div>
     </section>
 
     <section class="card reveal">
-      <h2>기쁜 소식 전해요</h2>
-      <p class="muted">사랑으로 기다리던 아기가 저희에게 와주었어요. 조심스럽고 감사한 마음으로 하루하루를 보내고 있습니다. 함께 축복해주시면 큰 힘이 됩니다.</p>
+      <h2>초대합니다</h2>
+      <p class="muted">사랑으로 자란 우리 아기의 첫 번째 생일을 맞아 작은 자리를 마련했어요. 오셔서 따뜻한 축하를 함께 나눠주세요 💛</p>
     </section>
 
     <section class="card reveal">
-      <h2>우리의 시간</h2>
-      <div class="timeline">
-        <div class="timeline-item"><strong>처음 알게 된 날</strong><span class="muted">설렘과 벅참으로 가득했던 순간</span></div>
-        <div class="timeline-item"><strong>첫 심장 소리</strong><span class="muted">작은 두근거림에 눈물이 핑 돌았어요</span></div>
-        <div class="timeline-item"><strong>오늘의 마음</strong><span class="muted">건강하게 만나길 기도하며 기다리고 있어요</span></div>
+      <h2>행사 안내</h2>
+      <div class="info muted">
+        <div><strong>📅 일시</strong><span>2026년 00월 00일 (토) 오후 12:00</span></div>
+        <div><strong>📍 장소</strong><span>OOO 돌잔치홀 / OOO점</span></div>
+        <div><strong>👶 아기</strong><span>OOO (태명: 작은기적)</span></div>
       </div>
     </section>
 
     <section class="card reveal">
-      <h2>초음파 사진</h2>
+      <h2>사진</h2>
       <div class="gallery">
-        <img src="images/ultrasound-1.jpg" alt="초음파 사진 1">
-        <img src="images/ultrasound-2.jpg" alt="초음파 사진 2">
-        <img src="images/family-1.jpg" alt="가족 사진">
+        <img src="images/ultrasound-1.jpg" alt="사진 1">
+        <img src="images/ultrasound-2.jpg" alt="사진 2">
+        <img src="images/family-1.jpg" alt="사진 3">
       </div>
-      <div class="hint">좌우로 밀어 사진을 볼 수 있어요</div>
+      <p class="muted" style="font-size:14px;margin-top:8px">좌우로 밀어서 사진을 볼 수 있어요</p>
     </section>
 
     <section class="card reveal">
       <h2>감사 인사</h2>
-      <p class="muted">늘 응원해 주시고 사랑해 주셔서 감사합니다. 건강하고 행복한 모습으로 인사드릴게요 💛</p>
+      <p class="muted">늘 아껴주시고 응원해주셔서 감사합니다. 건강하고 행복한 모습으로 반갑게 인사드릴게요.</p>
     </section>
   </main>
 
@@ -98,7 +75,7 @@
   <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
 
   <script>
-    const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.14});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.14});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
     btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈추기'}else{bgm.pause();on=false;btn.textContent='🎵 음악 듣기'}}catch(e){alert('음악 파일 재생에 실패했어요.')}})
