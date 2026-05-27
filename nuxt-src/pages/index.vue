@@ -5,21 +5,21 @@ const loading = ref(true)
 const timeline = [
   {
     step: '01',
-    title: '임테기 확인',
+    title: '초롱이가 찾아 온 날 ☀️',
     date: '두 줄의 시작',
     text: '우리 가족의 첫 소식',
     image: '/our-little-miracle/images/timeline-2-dad.jpg'
   },
   {
     step: '02',
-    title: '아빠된거 축하해',
+    title: '아빠와 초롱이의 만남 🤝',
     date: '기쁜 고백',
     text: '아빠가 되는 순간',
     image: '/our-little-miracle/images/timeline-1-test.jpg'
   },
   {
     step: '03',
-    title: '초음파 사진',
+    title: '초롱이의 첫 심장소리 💓',
     date: '초롱이 첫 인사',
     text: '작은 심장 소리와 함께',
     image: '/our-little-miracle/images/timeline-3-ultrasound.jpg'
@@ -53,7 +53,7 @@ onMounted(async () => {
       </div>
     </div>
 
-    <header class="top">초롱이를 소개합니다.</header>
+    <header class="top">초롱이를 소개합니다❤️</header>
 
     <main>
       <section class="hero section">
