@@ -90,3 +90,11 @@ h1{font-size:36px;line-height:1.24;margin:14px 0 8px;text-align:center;word-brea
 .card:hover{transform:translateY(-2px);box-shadow:0 16px 28px rgba(87,184,166,.22)}
 
 @keyframes pulseSoft{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+
+
+/* image-replaced components */
+.hero-box.card{background-image:url('/our-little-miracle/images/ui-card-mint-1.png');background-size:cover;background-position:center;border:0;box-shadow:0 14px 28px rgba(64,141,132,.22)}
+.letter-top{background-image:url('/our-little-miracle/images/ui-note-mint-1.png');background-size:cover;background-position:center;border:0;box-shadow:0 14px 28px rgba(64,141,132,.18)}
+.calendar{background-image:url('/our-little-miracle/images/ui-card-mint-1.png');background-size:cover;background-position:center;border:0}
+.tl-card{background-image:url('/our-little-miracle/images/ui-timeline-frame-1.png');background-size:cover;background-position:center;border:0;box-shadow:0 12px 24px rgba(64,141,132,.2)}
+.card::after{display:none}
