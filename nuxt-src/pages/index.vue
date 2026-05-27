@@ -69,9 +69,7 @@ onMounted(async () => {
       <section class="hero section">
         <div class="container hero-box card reveal hero-reveal">
           <video class="hero-video" :src="'/our-little-miracle/videos/kick.mp4'" autoplay muted loop playsinline :poster="'/our-little-miracle/images/ultrasound-1.jpg'"></video>
-          <div class="badge">FIRST REVEAL</div>
-          <h1>할아버지, 할머니가 되신 걸<br>축하드려요</h1>
-          <p class="lead">오늘 처음 전하는 소중한 소식, 우리 아기가 찾아왔어요.</p>
+          <p class="hero-one-line">할아버지, 할머니 초롱이 왔어요.</p>
         </div>
       </section>
 
