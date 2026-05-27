@@ -4,108 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>우리 아기 첫 돌잔치 초대장</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#faf7f3;--card:#fff;--txt:#1b1b1d;--muted:#6e6e73;--line:#eee3d7;--accent:#f08b64}
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
-    body{font-family:Pretendard,sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+    :root{--bg:#fff7f1;--txt:#272324;--muted:#726762;--card:#ffffff;--line:#f0dfd1;--point:#ee9b73}
+    *{box-sizing:border-box}html,body{margin:0;padding:0}
+    body{font-family:Pretendard,sans-serif;background:var(--bg);color:var(--txt);line-height:1.72}
+    .pattern{position:fixed;inset:0;background:radial-gradient(circle at 20% 12%,#ffe7d7 0 16%,transparent 17%),radial-gradient(circle at 80% 22%,#ffe7d7 0 14%,transparent 15%),radial-gradient(circle at 10% 70%,#ffe7d7 0 13%,transparent 14%),radial-gradient(circle at 86% 80%,#ffe7d7 0 15%,transparent 16%);opacity:.35;z-index:-1}
     .hero{position:relative;min-height:78svh;display:flex;align-items:flex-end;overflow:hidden}
     .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.58))}
-    .hero .copy{position:relative;z-index:2;color:#fff;padding:26px 18px 30px;max-width:780px;margin:0 auto;width:100%}
-    .chip{display:inline-block;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700}
-    h1{font-family:'Noto Serif KR',serif;font-size:clamp(2.3rem,9vw,4rem);line-height:1.13;margin:12px 0 6px}
-    .sub{font-size:clamp(1.15rem,4.6vw,1.7rem)}
+    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.62))}
+    .hero .copy{position:relative;z-index:2;color:#fff;padding:28px 18px 30px;max-width:760px;margin:0 auto;width:100%}
+    .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.48);background:rgba(255,255,255,.2);padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.8px}
+    h1{font-family:'Gowun Batang',serif;font-size:clamp(2.1rem,9vw,3.9rem);line-height:1.17;margin:12px 0 6px}
+    .sub{font-size:clamp(1.05rem,4.8vw,1.55rem);opacity:.96}
     .container{width:min(92vw,760px);margin:0 auto 100px}
-    .section{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 18px;margin:14px 0;box-shadow:0 10px 30px rgba(0,0,0,.05)}
-    .head .en{font-size:13px;letter-spacing:1.6px;color:#9a8b7d;font-weight:700;text-transform:uppercase}
-    .head .ko{font-size:1.75rem;font-weight:800;margin-top:3px}
-    .txt{font-size:1.08rem;color:var(--muted)}
-    .profile{display:grid;grid-template-columns:90px 1fr;gap:14px;align-items:center}
-    .profile img{width:90px;height:90px;border-radius:50%;object-fit:cover}
-    .timeline{display:grid;gap:10px}
-    .item{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff}
-    .item img{width:76px;height:76px;border-radius:10px;object-fit:cover}
-    .item b{font-size:1.03rem}
-    .calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:.9rem}
-    .calendar div{padding:8px 0;text-align:center;border-radius:8px;background:#fff;border:1px solid var(--line)}
-    .calendar .mark{background:#111;color:#fff;border-color:#111;font-weight:700}
-    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:82%;overflow:auto;gap:12px;scroll-snap-type:x mandatory}
+    .section{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 18px;margin:14px 0;box-shadow:0 10px 25px rgba(130,94,68,.08)}
+    .head .en{font-size:12px;letter-spacing:1.8px;color:#a28773;font-weight:700;text-transform:uppercase}
+    .head .ko{font-family:'Gowun Batang',serif;font-size:1.8rem;margin-top:4px}
+    .txt{font-size:1.05rem;color:var(--muted)}
+    .profile{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;margin-top:12px}
+    .profile img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:4px solid #fff0e4}
+    .timeline{display:grid;gap:10px;margin-top:12px}
+    .item{display:grid;grid-template-columns:84px 1fr;gap:12px;border:1px solid var(--line);border-radius:15px;padding:10px;background:#fffdfa}
+    .item img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+    .item b{display:block;font-size:1.04rem;margin-bottom:2px}
+    .calendar-wrap{margin-top:10px;border:1px solid var(--line);border-radius:16px;padding:12px;background:#fffdfa}
+    .calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:.85rem}
+    .calendar div{padding:7px 0;text-align:center;border-radius:7px;background:#fff;border:1px solid #f3e7dc}
+    .calendar .mark{background:var(--point);color:#fff;border-color:var(--point);font-weight:700}
+    .btns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+    .btns a{text-decoration:none;text-align:center;padding:10px 8px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#3a3431;font-size:.92rem}
+    .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:82%;overflow:auto;gap:12px;scroll-snap-type:x mandatory;margin-top:12px}
     .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;scroll-snap-align:center}
-    .btns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.btns a{padding:10px;border-radius:10px;background:#fff;border:1px solid var(--line);text-align:center;color:#222;text-decoration:none;font-size:.92rem}
-    .music{position:fixed;right:14px;bottom:14px;z-index:99;border:0;border-radius:999px;padding:13px 16px;background:var(--accent);color:#fff;font-weight:700}
-    .end{position:relative;min-height:40vh;display:flex;align-items:flex-end;border-radius:24px;overflow:hidden}
-    .end img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.end:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.54))}
-    .end .copy{position:relative;z-index:2;color:#fff;padding:18px}
+    .end{position:relative;min-height:42vh;border-radius:24px;overflow:hidden;margin-top:14px;display:flex;align-items:flex-end}
+    .end img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .end:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.58))}
+    .end .copy{position:relative;z-index:2;color:#fff;padding:20px}
+    .music{position:fixed;right:14px;bottom:14px;z-index:99;border:0;border-radius:999px;padding:13px 16px;background:var(--point);color:#fff;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.22)}
   </style>
 </head>
 <body>
-  <section class="hero">
-    <img src="images/family-1.jpg" alt="메인 사진">
-    <div class="copy">
-      <span class="chip">1st Birthday Invitation</span>
-      <h1>우리 아기 첫 돌잔치</h1>
-      <div class="sub">소중한 첫 생일에 여러분을 초대합니다</div>
+<div class="pattern"></div>
+<section class="hero">
+  <img src="images/family-1.jpg" alt="메인 사진">
+  <div class="copy">
+    <span class="chip">🎂 1st Birthday Invitation</span>
+    <h1>우리 아기 첫 돌잔치</h1>
+    <div class="sub">소중한 첫 생일에 여러분을 초대합니다</div>
+  </div>
+</section>
+
+<main class="container">
+  <section class="section">
+    <div class="head"><div class="en">Invitation</div><div class="ko">첫 생일을 축하해주세요</div></div>
+    <p class="txt">사랑스러운 우리 아기가 세상에 태어난 지 벌써 일 년이 되었습니다. 소중한 순간을 함께해주신 분들께 감사드리며 첫 번째 생일을 함께 축하해 주세요.</p>
+  </section>
+
+  <section class="section">
+    <div class="head"><div class="en">About Baby</div><div class="ko">오늘의 주인공</div></div>
+    <div class="profile">
+      <img src="images/ultrasound-1.jpg" alt="아기 프로필">
+      <div class="txt"><b style="color:#222;font-size:1.2rem">OOO</b><br>2026년 02월 14일에 태어난<br>아빠 · 엄마의 소중한 보물</div>
     </div>
   </section>
 
-  <main class="container">
-    <section class="section">
-      <div class="head"><div class="en">Invitation</div><div class="ko">첫 생일을 축하해주세요</div></div>
-      <p class="txt">사랑스러운 우리 아기가 세상에 태어난 지 벌써 일 년이 되었습니다. 소중한 순간을 함께해주신 분들께 감사드리며 첫 번째 생일을 함께 축하해 주세요.</p>
-    </section>
+  <section class="section">
+    <div class="head"><div class="en">Growth Story</div><div class="ko">성장 이야기</div></div>
+    <div class="timeline">
+      <div class="item"><img src="images/ultrasound-1.jpg"><div><b>처음 만난 날</b><div class="txt">작은 울음으로 모든 하루를 바꾼 날</div></div></div>
+      <div class="item"><img src="images/ultrasound-2.jpg"><div><b>100일</b><div class="txt">먹고 자고 웃다 보니 어느새 100일</div></div></div>
+      <div class="item"><img src="images/family-1.jpg"><div><b>첫 생일</b><div class="txt">드디어 저의 첫 생일이에요 🎂</div></div></div>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="head"><div class="en">About Baby</div><div class="ko">오늘의 주인공</div></div>
-      <div class="profile" style="margin-top:10px">
-        <img src="images/ultrasound-1.jpg" alt="아기 프로필">
-        <div class="txt"><b style="color:#222">OOO</b><br>2026년 02월 14일에 태어난<br>아빠 · 엄마의 소중한 보물</div>
-      </div>
-    </section>
+  <section class="section">
+    <div class="head"><div class="en">First Birthday</div><div class="ko">행사 안내</div></div>
+    <p class="txt">2026. 00. 00. (토) 오후 12시 · OOO 돌잔치홀</p>
+    <div class="calendar-wrap"><div class="calendar">
+      <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
+      <div></div><div></div><div></div><div></div><div>1</div><div>2</div><div>3</div>
+      <div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
+      <div>11</div><div>12</div><div>13</div><div class="mark">14</div><div>15</div><div>16</div><div>17</div>
+    </div></div>
+  </section>
 
-    <section class="section">
-      <div class="head"><div class="en">Growth Story</div><div class="ko">성장 이야기</div></div>
-      <div class="timeline" style="margin-top:10px">
-        <div class="item"><img src="images/ultrasound-1.jpg"><div><b>작은 울음으로 시작</b><div class="txt">처음 만난 순간, 모든 하루가 달라졌어요.</div></div></div>
-        <div class="item"><img src="images/ultrasound-2.jpg"><div><b>100일</b><div class="txt">먹고 자고 웃다 보니 어느새 100일.</div></div></div>
-        <div class="item"><img src="images/family-1.jpg"><div><b>첫 생일</b><div class="txt">드디어 저의 첫 생일이에요 🎂</div></div></div>
-      </div>
-    </section>
+  <section class="section">
+    <div class="head"><div class="en">Location</div><div class="ko">오시는 길</div></div>
+    <p class="txt">경기 성남시 분당구 OOO로 00</p>
+    <div class="btns"><a href="#">네이버지도</a><a href="#">티맵</a><a href="#">카카오맵</a></div>
+  </section>
 
-    <section class="section">
-      <div class="head"><div class="en">First Birthday</div><div class="ko">행사 안내</div></div>
-      <p class="txt" style="margin:8px 0 12px">2026. 00. 00. (토) 오후 12시 · OOO 돌잔치홀</p>
-      <div class="calendar">
-        <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
-        <div> </div><div> </div><div> </div><div> </div><div>1</div><div>2</div><div>3</div>
-        <div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
-        <div>11</div><div>12</div><div>13</div><div class="mark">14</div><div>15</div><div>16</div><div>17</div>
-      </div>
-    </section>
+  <section class="section">
+    <div class="head"><div class="en">Gallery</div><div class="ko">갤러리</div></div>
+    <div class="gallery"><img src="images/ultrasound-1.jpg"><img src="images/ultrasound-2.jpg"><img src="images/family-1.jpg"></div>
+  </section>
 
-    <section class="section">
-      <div class="head"><div class="en">Location</div><div class="ko">오시는 길</div></div>
-      <p class="txt" style="margin-top:8px">경기 성남시 분당구 OOO로 00</p>
-      <div class="btns" style="margin-top:10px"><a href="#">네이버지도</a><a href="#">티맵</a><a href="#">카카오맵</a></div>
-    </section>
+  <section class="end">
+    <img src="images/family-1.jpg" alt="엔딩사진">
+    <div class="copy"><div style="font-size:1.6rem;font-weight:800">제 첫 생일 🎂</div><div style="font-size:1.1rem">같이 축하해 주실 거죠?</div></div>
+  </section>
+</main>
 
-    <section class="section">
-      <div class="head"><div class="en">Gallery</div><div class="ko">갤러리</div></div>
-      <div class="gallery" style="margin-top:10px">
-        <img src="images/ultrasound-1.jpg" alt="1"><img src="images/ultrasound-2.jpg" alt="2"><img src="images/family-1.jpg" alt="3">
-      </div>
-    </section>
-
-    <section class="end">
-      <img src="images/family-1.jpg" alt="엔딩사진"><div class="copy"><div style="font-size:1.6rem;font-weight:800">제 첫 생일 🎂</div><div style="font-size:1.1rem">같이 축하해 주실 거죠?</div></div>
-    </section>
-  </main>
-
-  <button id="musicToggle" class="music">🎵 음악 재생</button>
-  <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
-  <script>
-    const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
-    btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈춤'}else{bgm.pause();on=false;btn.textContent='🎵 음악 재생'}}catch(e){alert('음악 파일 재생에 실패했어요')}})
-  </script>
+<button id="musicToggle" class="music">🎵 음악 재생</button>
+<audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
+<script>
+const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
+btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈춤'}else{bgm.pause();on=false;btn.textContent='🎵 음악 재생'}}catch(e){alert('음악 파일 재생에 실패했어요')}})
+</script>
 </body>
 </html>
