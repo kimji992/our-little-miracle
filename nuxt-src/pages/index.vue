@@ -31,12 +31,12 @@ const toggleMusic = async () => {
         <img :src="'/our-little-miracle/images/family-1.jpg'" class="hero-img" alt="baby-main" />
         <div style="margin-top:16px"><span class="badge joy-gradient">OUR LITTLE MIRACLE</span></div>
         <h1>작고 소중한 너의 하루하루</h1>
-        <p class="lead">부모님께 전하는 아기의 성장 기록 💛</p>
+        <p class="lead">할아버지, 할머니께 전하는 아기의 성장 기록 💛</p>
       </section>
 
       <section class="sec">
         <div class="container">
-          <h2 class="k-title">부모님께 보여드리는 성장 이야기</h2>
+          <h2 class="k-title">할아버지, 할머니께 보여드리는 성장 이야기</h2>
           <div class="timeline">
             <div class="row">
               <div class="text" style="text-align:center">
@@ -67,11 +67,11 @@ const toggleMusic = async () => {
 
       <section class="sec" style="background:#f4f6f8">
         <div class="panel">
-          <h3 style="font-size:34px;color:#006c52;margin-top:0">사랑하는 부모님께</h3>
-          <p class="muted">작은 생명을 기다리는 시간 동안 늘 곁에서 응원해 주셔서 감사합니다.</p>
-          <p class="muted">하루하루 커지는 기쁨을 부모님과 가장 먼저 나누고 싶었습니다.</p>
+          <h3 style="font-size:34px;color:#006c52;margin-top:0">사랑하는 할아버지, 할머니께</h3>
+          <p class="muted">작은 생명을 기다리는 시간 동안 늘 곁에서 응원해 주셔서 감사합니다, 할아버지 할머니.</p>
+          <p class="muted">하루하루 커지는 기쁨을 할아버지, 할머니와 가장 먼저 나누고 싶었습니다.</p>
           <p class="muted">앞으로도 우리 아기의 모든 순간을 함께 지켜봐 주세요.</p>
-          <p style="color:#006c52;font-weight:700">사랑하는 부모님, 진심으로 감사하고 사랑합니다 💛</p>
+          <p style="color:#006c52;font-weight:700">사랑하는 할아버지, 할머니 진심으로 감사하고 사랑합니다 💛</p>
         </div>
       </section>
     </main>
