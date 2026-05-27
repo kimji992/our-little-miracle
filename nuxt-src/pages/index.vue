@@ -66,6 +66,31 @@ onMounted(async () => {
         </div>
       </section>
 
+
+      <section class="section" style="padding-top:10px;padding-bottom:8px">
+        <div class="container">
+          <div class="letter-top card reveal">
+            <p class="to">TO. 할모니 하부지</p>
+            <p class="msg">내년 1월에 건강하게 만나요!</p>
+            <p class="from">~ 초롱이가 -</p>
+          </div>
+          <div class="calendar card reveal">
+            <div class="cal-head">2027년 1월</div>
+            <div class="cal-grid cal-days">
+              <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+            </div>
+            <div class="cal-grid">
+              <span class="dim">27</span><span class="dim">28</span><span class="dim">29</span><span class="dim">30</span><span class="dim">31</span><span>1</span><span>2</span>
+              <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+              <span>10</span><span>11</span><span class="checked">12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+              <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+              <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+              <span>31</span><span class="dim">1</span><span class="dim">2</span><span class="dim">3</span><span class="dim">4</span><span class="dim">5</span><span class="dim">6</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" style="padding-top:8px">
         <div class="container">
           <h2 class="title reveal">성장 타임라인</h2>
