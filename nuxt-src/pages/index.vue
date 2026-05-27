@@ -22,7 +22,7 @@ const toggleMusic = async () => {
 
     <header class="top">
       <span class="material-symbols-outlined" style="color:#006c52">favorite</span>
-      <strong style="color:#006c52">성장 기록</strong>
+      <strong style="color:#006c52">우리 채널의 작은 기적</strong>
       <span class="material-symbols-outlined" style="color:#006c52">photo_library</span>
     </header>
 
@@ -31,12 +31,12 @@ const toggleMusic = async () => {
         <img :src="'/our-little-miracle/images/family-1.jpg'" class="hero-img" alt="baby-main" />
         <div style="margin-top:16px"><span class="badge joy-gradient">OUR LITTLE MIRACLE</span></div>
         <h1>작고 소중한 너의 하루하루</h1>
-        <p class="lead">사랑으로 자라는 우리 아기의 성장 기록 💛</p>
+        <p class="lead">구독해 주신 부모님과 함께 쓰는 성장 스토리 💛</p>
       </section>
 
       <section class="sec">
         <div class="container">
-          <h2 class="k-title">사진으로 보는 성장 이야기</h2>
+          <h2 class="k-title">부모님 구독자 전용 성장 피드</h2>
           <div class="timeline">
             <div class="row">
               <div class="text" style="text-align:center">
@@ -67,11 +67,11 @@ const toggleMusic = async () => {
 
       <section class="sec" style="background:#f4f6f8">
         <div class="panel">
-          <h3 style="font-size:34px;color:#006c52;margin-top:0">엄마 아빠에게</h3>
-          <p class="muted">작은 생명을 품고 지켜낸 모든 시간, 정말 고생 많았어요.</p>
-          <p class="muted">서툴지만 누구보다 따뜻한 마음으로 하루를 채워가는 엄마 아빠를 응원합니다.</p>
-          <p class="muted">지금처럼 서로를 믿고, 아기를 사랑으로 안아주세요.</p>
-          <p style="color:#006c52;font-weight:700">세상에서 가장 멋진 부모님이에요 💛</p>
+          <h3 style="font-size:34px;color:#006c52;margin-top:0">우리 채널 VIP 구독자, 엄마 아빠께</h3>
+          <p class="muted">첫 구독부터 지금까지, 가장 가까이서 응원해 주셔서 고마워요.</p>
+          <p class="muted">매일 업데이트되는 웃음과 사랑을 제일 먼저 받아보는 특별한 구독자예요.</p>
+          <p class="muted">앞으로도 우리 아기의 모든 시즌을 함께 구독해 주세요.</p>
+          <p style="color:#006c52;font-weight:700">평생 이용권 구독자, 엄마 아빠 사랑해요 💛</p>
         </div>
       </section>
     </main>
