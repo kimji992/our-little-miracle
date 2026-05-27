@@ -62,7 +62,13 @@ const toggleMusic = async () => {
 
 <template>
   <div>
-    <div class="loader" :class="{ hide: !loading }"><div>Our Little Miracle</div></div>
+    <div class="loader" :class="{ hide: !loading }">
+      <div class="loader-box">
+        <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="loading-ultrasound" class="loader-img" />
+        <div class="loader-text">할아버지 할머니 되는중</div>
+        <div class="loader-progress"><span class="loader-bar"></span></div>
+      </div>
+    </div>
 
     <header class="top">우리의 작은 기적</header>
 
