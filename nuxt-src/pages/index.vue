@@ -8,14 +8,14 @@ const timeline = [
     title: '임테기 확인',
     date: '두 줄의 시작',
     text: '우리 가족의 첫 소식',
-    image: '/our-little-miracle/images/timeline-1-test.jpg'
+    image: '/our-little-miracle/images/timeline-2-dad.jpg'
   },
   {
     step: '02',
     title: '아빠된거 축하해',
     date: '기쁜 고백',
     text: '아빠가 되는 순간',
-    image: '/our-little-miracle/images/timeline-2-dad.jpg'
+    image: '/our-little-miracle/images/timeline-1-test.jpg'
   },
   {
     step: '03',
