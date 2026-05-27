@@ -26,16 +26,6 @@ const timeline = [
   }
 ]
 
-const gallery = [
-  '/our-little-miracle/images/timeline-1-test.jpg',
-  '/our-little-miracle/images/timeline-2-dad.jpg',
-  '/our-little-miracle/images/timeline-3-ultrasound.jpg',
-  '/our-little-miracle/images/cholong-main.jpg',
-  '/our-little-miracle/images/timeline-1-test.jpg',
-  '/our-little-miracle/images/timeline-2-dad.jpg',
-  '/our-little-miracle/images/timeline-3-ultrasound.jpg',
-  '/our-little-miracle/images/cholong-main.jpg'
-]
 
 onMounted(async () => {
   setTimeout(() => (loading.value = false), 900)
@@ -100,16 +90,7 @@ onMounted(async () => {
 
       
 
-      <section class="section" style="padding-top:0">
-        <div class="container">
-          <h2 class="title reveal">Gallery</h2>
-          <div class="gallery-grid">
-            <div v-for="(img, i) in gallery" :key="i" class="g-item reveal" :class="`g-${i % 8}`">
-              <img :src="img" :alt="`gallery-${i}`" />
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <p class="footer">with love</p>
     </main>
