@@ -1,0 +1,1 @@
+import{_ as s,d as a,b as n,q as o}from"./Brgm_Jia.js";const c={},l={class:"fullbleed"};function r(d,e){return o(),a("main",l,[...e[0]||(e[0]=[n("iframe",{class:"embed",loading:"eager",src:"https://www.miricanvas.com/v2/ko/design2/v/23b88770-45df-46ff-a256-e867edcda872?mode=embed",allowfullscreen:"",scrolling:"yes"},null,-1)])])}const f=s(c,[["render",r]]);export{f as default};

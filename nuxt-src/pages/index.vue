@@ -1,8 +1,8 @@
 <template>
-  <main style="height:100dvh;min-height:100vh;background:#fff;margin:0;">
+  <main class="fullbleed">
     <iframe
+      class="embed"
       loading="eager"
-      style="display:block;width:100%;height:100dvh;min-height:100vh;border:none;padding:0;margin:0;"
       src="https://www.miricanvas.com/v2/ko/design2/v/23b88770-45df-46ff-a256-e867edcda872?mode=embed"
       allowfullscreen
       scrolling="yes"
