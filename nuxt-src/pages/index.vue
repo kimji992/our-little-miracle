@@ -103,6 +103,7 @@ onMounted(async () => {
               loading="lazy"
               class="embed-frame"
               src="https://www.miricanvas.com/v2/ko/design2/v/23b88770-45df-46ff-a256-e867edcda872?mode=embed"
+              scrolling="yes"
             ></iframe>
           </div>
         </div>
