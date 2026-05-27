@@ -1,30 +1,28 @@
 <script setup>
 import { onMounted, ref, nextTick } from 'vue'
 const loading = ref(true)
-const playing = ref(false)
-const audio = ref(null)
 
 const timeline = [
   {
     step: '01',
-    title: '처음 만난 날',
-    date: 'First Reveal',
-    text: '아주 작은 점으로 시작된 우리의 기적',
-    image: '/our-little-miracle/images/ultrasound-1.jpg'
+    title: '임테기 확인',
+    date: '두 줄의 기적',
+    text: '작은 표시 두 줄에 온 세상이 달라진 날',
+    image: '/our-little-miracle/images/family-1.jpg'
   },
   {
     step: '02',
-    title: '두근거림',
-    date: 'Heartbeat Day',
-    text: '처음 들은 심장 소리에 웃고 울던 순간',
-    image: '/our-little-miracle/images/ultrasound-2.jpg'
+    title: '병원에서 처음 엄마 만난 날',
+    date: '첫 초음파',
+    text: '병원에서 처음 마주한 초롱이의 모습',
+    image: '/our-little-miracle/images/ultrasound-1.jpg'
   },
   {
     step: '03',
-    title: '기다림의 시간',
-    date: 'Growing Love',
-    text: '사랑으로 채워지는 매일의 기록',
-    image: '/our-little-miracle/images/family-1.jpg'
+    title: '아빠 만난 날',
+    date: '함께 들은 심장소리',
+    text: '아빠가 처음 보고 듣고 더 사랑하게 된 순간',
+    image: '/our-little-miracle/images/ultrasound-2.jpg'
   }
 ]
 
@@ -53,11 +51,6 @@ onMounted(async () => {
   }, { threshold: 0.18 })
   els.forEach((el) => io.observe(el))
 })
-const toggleMusic = async () => {
-  if (!audio.value) return
-  if (!playing.value) { await audio.value.play(); playing.value = true }
-  else { audio.value.pause(); playing.value = false }
-}
 </script>
 
 <template>
@@ -117,7 +110,5 @@ const toggleMusic = async () => {
       <p class="footer">with love</p>
     </main>
 
-    <button class="music" @click="toggleMusic">{{ playing ? '음악 멈춤' : '음악 재생' }}</button>
-    <audio ref="audio" :src="'/our-little-miracle/audio/bgm.wav'" loop preload="none" />
   </div>
 </template>
