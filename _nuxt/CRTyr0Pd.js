@@ -1,0 +1,1 @@
+import{_ as s,d as n,b as a,q as t}from"./DIOFdNYR.js";const o={},r={class:"single-wrap"};function c(l,e){return t(),n("main",r,[...e[0]||(e[0]=[a("img",{class:"single-img",src:"/our-little-miracle/images/cholong-main.jpg",alt:"초롱이"},null,-1)])])}const m=s(o,[["render",c]]);export{m as default};
