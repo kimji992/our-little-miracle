@@ -4,79 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>우리 아기 첫 돌잔치 초대장</title>
-  <meta name="theme-color" content="#f8f5f2" />
-
+  <meta name="theme-color" content="#f6f6f6" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#f8f5f2;--text:#1f1f21;--muted:#666;--card:#ffffffd9;--line:#ece6df;--accent:#1f1f21}
-    body{font-family:'Pretendard',sans-serif;background:var(--bg);color:var(--text)}
-    .hero{height:75svh;min-height:520px;position:relative;overflow:hidden;border-radius:0 0 2rem 2rem}
-    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.02)}
-    .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.58))}
-    .hero-copy{position:relative;z-index:2;color:#fff}
-    .title{font-family:'Noto Serif KR',serif;font-size:clamp(2.2rem,8.4vw,4.1rem);line-height:1.13}
-    .cardx{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:1.25rem;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-    .section-title{font-weight:800;font-size:clamp(1.45rem,5vw,2rem)}
-    .info-row{border:1px solid var(--line);border-radius:.9rem;padding:.85rem 1rem;background:#fff}
-    .swiper-slide img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:1rem}
-    .music{position:fixed;right:14px;bottom:14px;z-index:999;border:0;border-radius:999px;padding:.85rem 1rem;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 12px 22px rgba(0,0,0,.2)}
+    :root{--bg:#f6f6f6;--card:#fff;--text:#111;--muted:#666;--line:#ececec}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'Pretendard',sans-serif}
+    .hero{padding:56px 0 22px}
+    .wrap{max-width:760px}
+    .kicker{font-size:12px;letter-spacing:2px;color:#888;font-weight:700}
+    h1{font-size:clamp(2.2rem,8vw,4rem);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:.35rem 0}
+    .sub{font-size:clamp(1.05rem,4vw,1.45rem);color:#555}
+    .hero-img{width:100%;border-radius:20px;aspect-ratio:4/5;object-fit:cover}
+    .cardx{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 18px}
+    .title{font-size:1.5rem;font-weight:800;letter-spacing:-.01em}
+    .muted{color:var(--muted);font-size:1.05rem;line-height:1.75}
+    .info{display:grid;gap:10px}
+    .info div{border:1px solid var(--line);border-radius:12px;padding:12px 13px;background:#fafafa}
+    .gallery{display:grid;grid-template-columns:1fr;gap:10px}
+    .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+    .music{position:fixed;right:14px;bottom:14px;z-index:99;border:0;border-radius:999px;padding:12px 14px;font-size:.95rem;font-weight:700;background:#111;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+    @media (min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}
   </style>
 </head>
 <body>
-  <section class="hero d-flex align-items-end">
-    <img src="images/family-1.jpg" alt="가족 사진">
-    <div class="container hero-copy pb-5">
-      <div class="small text-uppercase fw-bold mb-2" style="letter-spacing:2px">1st Birthday Invitation</div>
-      <h1 class="title mb-2">우리 아기<br>첫 돌잔치</h1>
-      <p class="fs-4 mb-0">소중한 첫 생일에 여러분을 초대합니다</p>
-    </div>
-  </section>
-
-  <main class="container py-4" style="max-width:760px">
-    <section class="cardx p-4 mb-3" data-aos="fade-up">
-      <h2 class="section-title mb-2">초대합니다</h2>
-      <p class="text-secondary fs-5 mb-0">사랑으로 자란 우리 아기의 첫 번째 생일을 맞아 작은 자리를 마련했어요. 오셔서 따뜻한 축하를 함께 나눠주세요 💛</p>
+  <main class="container wrap pb-5">
+    <section class="hero">
+      <div class="kicker">1ST BIRTHDAY INVITATION</div>
+      <h1>우리 아기<br>첫 돌잔치</h1>
+      <p class="sub mb-4">소중한 첫 생일에 여러분을 초대합니다</p>
+      <img src="images/family-1.jpg" alt="가족 사진" class="hero-img" />
     </section>
 
-    <section class="cardx p-4 mb-3" data-aos="fade-up" data-aos-delay="80">
-      <h2 class="section-title mb-3">행사 안내</h2>
-      <div class="d-grid gap-2 text-secondary fs-5">
-        <div class="info-row"><b>📅 일시</b> 2026년 00월 00일 (토) 오후 12:00</div>
-        <div class="info-row"><b>📍 장소</b> OOO 돌잔치홀 / OOO점</div>
-        <div class="info-row"><b>👶 아기</b> OOO (태명: 작은기적)</div>
+    <section class="cardx mb-3">
+      <div class="title mb-2">초대합니다</div>
+      <p class="muted mb-0">사랑으로 자란 우리 아기의 첫 번째 생일을 맞아 작은 자리를 마련했어요. 오셔서 따뜻한 축하를 함께 나눠주세요.</p>
+    </section>
+
+    <section class="cardx mb-3">
+      <div class="title mb-3">행사 안내</div>
+      <div class="info muted">
+        <div><b>📅 일시</b> 2026년 00월 00일 (토) 오후 12:00</div>
+        <div><b>📍 장소</b> OOO 돌잔치홀 / OOO점</div>
+        <div><b>👶 아기</b> OOO (태명: 작은기적)</div>
       </div>
     </section>
 
-    <section class="cardx p-4 mb-3" data-aos="fade-up" data-aos-delay="120">
-      <h2 class="section-title mb-3">사진</h2>
-      <div class="swiper" id="photoSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="images/ultrasound-1.jpg" alt="사진1"></div>
-          <div class="swiper-slide"><img src="images/ultrasound-2.jpg" alt="사진2"></div>
-          <div class="swiper-slide"><img src="images/family-1.jpg" alt="사진3"></div>
-        </div>
-        <div class="swiper-pagination mt-2"></div>
+    <section class="cardx mb-3">
+      <div class="title mb-3">사진</div>
+      <div class="gallery">
+        <img src="images/ultrasound-1.jpg" alt="사진 1" />
+        <img src="images/ultrasound-2.jpg" alt="사진 2" />
+        <img src="images/family-1.jpg" alt="사진 3" />
       </div>
     </section>
 
-    <section class="cardx p-4" data-aos="fade-up" data-aos-delay="160">
-      <h2 class="section-title mb-2">감사 인사</h2>
-      <p class="text-secondary fs-5 mb-0">늘 아껴주시고 응원해주셔서 감사합니다. 건강하고 행복한 모습으로 반갑게 인사드릴게요.</p>
+    <section class="cardx">
+      <div class="title mb-2">감사 인사</div>
+      <p class="muted mb-0">늘 아껴주시고 응원해주셔서 감사합니다. 건강하고 행복한 모습으로 반갑게 인사드릴게요.</p>
     </section>
   </main>
 
   <button id="musicToggle" class="music">🎵 음악 듣기</button>
   <audio id="bgm" src="audio/bgm.wav" loop preload="none"></audio>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({duration:700, once:true, offset:60});
-    new Swiper('#photoSwiper',{slidesPerView:1.15,spaceBetween:10,centeredSlides:true,pagination:{el:'.swiper-pagination',clickable:true},breakpoints:{768:{slidesPerView:2.2}}});
     const btn=document.getElementById('musicToggle');const bgm=document.getElementById('bgm');let on=false;
     btn.addEventListener('click',async()=>{try{if(!on){await bgm.play();on=true;btn.textContent='⏸️ 음악 멈추기'}else{bgm.pause();on=false;btn.textContent='🎵 음악 듣기'}}catch(e){alert('음악 파일 재생에 실패했어요')}})
   </script>
