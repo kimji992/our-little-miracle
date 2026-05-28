@@ -49,9 +49,7 @@ onMounted(async () => {
     <div class="loader" :class="{ hide: !loading }">
       <div class="loader-box">
         <div class="loader-test-wrap">
-          <img :src="'/our-little-miracle/images/preg-test-cropped.png'" alt="loading-test" class="loader-img" />
-          <span class="test-line test-line-1"></span>
-          <span class="test-line test-line-2"></span>
+          <img :src="'/our-little-miracle/images/preg-test-loader.gif'" alt="loading-test" class="loader-img" />
         </div>
         <div class="loader-text">초롱이 만나러 가는중</div>
       </div>
