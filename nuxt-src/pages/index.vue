@@ -48,8 +48,12 @@ onMounted(async () => {
   <div>
     <div class="loader" :class="{ hide: !loading }">
       <div class="loader-box">
-        <img :src="'/our-little-miracle/images/ultrasound-1.jpg'" alt="loading-ultrasound" class="loader-img" />
-        <div class="loader-text">손주 만나러 가는중</div>
+        <div class="loader-test-wrap">
+          <img :src="'/our-little-miracle/images/timeline-1-test.jpg'" alt="loading-test" class="loader-img" />
+          <span class="test-line test-line-1"></span>
+          <span class="test-line test-line-2"></span>
+        </div>
+        <div class="loader-text">초롱이 만나러 가는중</div>
         <div class="loader-progress"><span class="loader-bar"></span></div>
       </div>
     </div>
