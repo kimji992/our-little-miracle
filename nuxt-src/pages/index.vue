@@ -54,7 +54,6 @@ onMounted(async () => {
           <span class="test-line test-line-2"></span>
         </div>
         <div class="loader-text">초롱이 만나러 가는중</div>
-        <div class="loader-progress"><span class="loader-bar"></span></div>
       </div>
     </div>
 
