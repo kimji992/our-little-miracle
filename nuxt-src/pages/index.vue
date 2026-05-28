@@ -84,6 +84,7 @@ onMounted(async () => {
               <source :src="'/our-little-miracle/videos/kick.mp4'" type="video/mp4" />
             </video>
             <button class="fullscreen-btn" @click="toggleFullscreen">⛶ 전체화면</button>
+            <img class="hero-baby-figure" :src="'/our-little-miracle/images/baby-figure.jpg'" alt="아기 그림" />
           </div>
           <p class="hero-one-line">할아버지, 할머니 초롱이 왔어요.</p>
         </div>
