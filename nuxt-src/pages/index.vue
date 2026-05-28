@@ -68,9 +68,9 @@ onMounted(async () => {
       <section class="hero section">
         <div class="container hero-box card reveal hero-reveal">
           <div class="hero-video-wrap">
-            <video class="hero-video" autoplay loop playsinline preload="auto" controls>
-              <source :src="'/our-little-miracle/videos/cholong-kick.mov'" type="video/quicktime" />
-              <source :src="'/our-little-miracle/videos/kick.mp4'" type="video/mp4" />
+            <video class="hero-video" autoplay loop playsinline preload="metadata" controls>
+              <source :src="'/our-little-miracle/videos/cholong-kick.mov?v=20260528'" type="video/quicktime" />
+              <source :src="'/our-little-miracle/videos/kick.mp4?v=20260528'" type="video/mp4" />
             </video>
           </div>
           <p class="hero-one-line">할아버지, 할머니 초롱이 왔어요.</p>
