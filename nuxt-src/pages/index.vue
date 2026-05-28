@@ -20,9 +20,9 @@ const timeline = [
   },
   {
     step: '03',
-    title: '초롱이의 첫 심장소리 💓',
+    title: '초롱이의 첫 초음파💖',
     date: '초롱이 첫 인사',
-    text: '작은 심장 소리와 함께',
+    text: '아기집이 생겼어요 ! 안녕 아가👼🏻',
     image: '/our-little-miracle/images/timeline-3-ultrasound.jpg'
   }
 ]
