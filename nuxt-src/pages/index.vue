@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref, nextTick } from 'vue'
 const loading = ref(true)
+const heroVideo = ref(null)
 
 const timeline = [
   {
@@ -26,6 +27,25 @@ const timeline = [
   }
 ]
 
+
+const toggleFullscreen = async () => {
+  const video = heroVideo.value
+  if (!video) return
+
+  if (document.fullscreenElement) {
+    await document.exitFullscreen()
+    return
+  }
+
+  if (video.requestFullscreen) {
+    await video.requestFullscreen()
+    return
+  }
+
+  if (video.webkitEnterFullscreen) {
+    video.webkitEnterFullscreen()
+  }
+}
 
 onMounted(async () => {
   setTimeout(() => (loading.value = false), 900)
@@ -58,10 +78,13 @@ onMounted(async () => {
     <main>
       <section class="hero section">
         <div class="container hero-box card reveal hero-reveal">
-          <video class="hero-video" autoplay loop playsinline preload="auto" controls >
-            <source :src="'/our-little-miracle/videos/cholong-kick.mov'" type="video/quicktime" />
-            <source :src="'/our-little-miracle/videos/kick.mp4'" type="video/mp4" />
-          </video>
+          <div class="hero-video-wrap">
+            <video ref="heroVideo" class="hero-video" autoplay loop playsinline preload="auto" controls>
+              <source :src="'/our-little-miracle/videos/cholong-kick.mov'" type="video/quicktime" />
+              <source :src="'/our-little-miracle/videos/kick.mp4'" type="video/mp4" />
+            </video>
+            <button class="fullscreen-btn" @click="toggleFullscreen">⛶ 전체화면</button>
+          </div>
           <p class="hero-one-line">할아버지, 할머니 초롱이 왔어요.</p>
         </div>
       </section>
