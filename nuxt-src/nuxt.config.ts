@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/our-little-miracle/',
     head: {
-      title: '가족 축하 이벤트',
+      title: '저금통 소개하고 저금 받아가세요!',
       meta: [
         { name: 'description', content: '저금통 소개하고 저금 받아가세요!' },
         { property: 'og:title', content: '저금통 소개하고 저금 받아가세요!' },
